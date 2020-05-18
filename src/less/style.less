@@ -1,0 +1,70 @@
+@import "smart-grid.less";
+@import "var.less";
+
+.reset();
+
+.wrapper {  // центрущая обертка
+	.wrapper();
+}
+
+.body {
+	box-sizing: border-box;
+}
+
+////////// MIXINS BLOCK START
+.mixinstr {
+  //border: @border;
+    display: flex;        
+    height: 20%;    
+    span {
+      border: @border;      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: center;
+      height: 100%;
+      width: 33%;
+      font-size: 1.1rem;
+    }
+}
+////////// MIXINS BLOCK END
+
+.wrp {
+  //border: @border;
+  display: flex;
+  align-items: center;  
+  flex-direction: column;
+  height: 100vh;
+  &__task1 {
+    border: @border;
+    height: 500px;
+    width: 50%;
+  }
+  &__and {
+    border: @border;
+    width: 200px;
+    height: 250px;
+  }
+  &__frststr {
+    .mixinstr();
+    font-weight: bolder;
+  }  
+  &__scndtstr {
+    .mixinstr();
+  }    
+  &__thrdstr {
+    .mixinstr();    
+  }
+  &__frtstr {
+    .mixinstr();
+  }
+  &__fvstr {
+    .mixinstr();
+  }
+  
+  
+
+
+
+  
+}

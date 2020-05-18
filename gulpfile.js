@@ -10,7 +10,7 @@ const settings = {
 	dist: './dist',
 	srcless: './src/less/style.less',
 	srccss: './dist/css',
-	srchtml: './dist/*.html',
+	srchtml: './dist/*.php',
 	srcjs: './src/js'
 };
 
@@ -78,7 +78,7 @@ gulp.task('js', function () {
 
 
 gulp.task('htmlmin', function () {
- gulp.src('./src/*.html')
+ gulp.src('./src/*.php')
   // .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('./dist'))
 		.pipe(browserSync.reload({
@@ -90,7 +90,7 @@ gulp.task('htmlmin', function () {
 gulp.task('watch', ['preproc', 'js', 'htmlmin', 'browserSync'], function () {
 	gulp.watch(settings.srcless, ['preproc']);  
 	gulp.watch(settings.srcjs + '/*.js', ['js']);
- 	gulp.watch('./src/*.html', ['htmlmin']);
+ 	gulp.watch('./src/*.php', ['htmlmin']);
 });
 
 gulp.task('grid', function () {
@@ -101,7 +101,8 @@ gulp.task('grid', function () {
 gulp.task('browserSync', function () {
 		browserSync.init({
 			server: {
-					baseDir: settings.dist
+          baseDir: settings.dist
+          // proxy: "http://localhost/pp/dist/"
 			}
 		});
 });

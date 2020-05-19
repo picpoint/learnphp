@@ -9,7 +9,7 @@
 <body>
 
   <section class="wrp">    
-    <div class="wrp__task1">
+    <div class="wrp__task1">      
       
       <div class="wrp__and">        
         <div class="wrp__frststr">
@@ -87,13 +87,77 @@
           </span>
         </div>
 
+        <div class="wrp__frtstr">
+          <span>0</span>
+          <span>1</span>
+          <span>
+            <?php            
+              disunction(false, true);
+            ?>
+          </span>
+        </div>
+
+        <div class="wrp__fvstr">
+          <span>1</span>
+          <span>1</span>
+          <span>
+            <?php            
+              disunction(true, true);
+            ?>
+          </span>
+        </div>
+      </div>
+
+      <div class="wrp__xor">
+        <div class="wrp__frststr">
+          <span>a</span>
+          <span>b</span>
+          <span>a xor b</span>
+        </div>
+          
+        <div class="wrp__scndtstr">
+          <span>0</span>
+          <span>0</span>
+          <span>
+            <?php
+              exor(false, false);
+            ?>
+          </span>
+        </div>
+
+        <div class="wrp__thrdstr">
+          <span>1</span>
+          <span>0</span>
+          <span>
+            <?php            
+              exor(true, false);
+            ?>
+          </span>
+        </div>
+
+        <div class="wrp__frtstr">
+          <span>0</span>
+          <span>1</span>
+          <span>
+            <?php            
+              exor(false, true);
+            ?>
+          </span>
+        </div>
+
+        <div class="wrp__fvstr">
+          <span>1</span>
+          <span>1</span>
+          <span>
+            <?php            
+              exor(true, true);
+            ?>
+          </span>
+        </div>      
 
       </div>
 
-
-
-    </div>
-    
+    </div>    
   </section>
   
 

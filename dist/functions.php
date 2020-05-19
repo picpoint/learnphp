@@ -18,3 +18,13 @@ function disunction($x, $y) {
     echo(0);
   }
 }
+
+
+function exor($x, $y) {
+  $z = $x ^ $y;
+  if($z == true) {
+    echo(1);
+  } else {
+    echo(0);
+  }
+}

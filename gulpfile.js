@@ -104,7 +104,7 @@ gulp.task('browserSync', function () {
 		browserSync.init({
 			server: {
           baseDir: settings.dist
-          // proxy: 'http://tsk/dist/'
+          // proxy: '127.0.0.1://www/tsk/dist/'
 			}
 		});
 });

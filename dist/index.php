@@ -8,9 +8,9 @@
 </head>
 <body>
 
-  <section class="wrp">    
-    <div class="wrp__task1">      
-      
+  <section class="wrp">        
+    <h3>Task 1</h3>
+    <div class="wrp__task1">            
       <div class="wrp__and">        
         <div class="wrp__frststr">
           <span>a</span>
@@ -154,10 +154,33 @@
             ?>
           </span>
         </div>      
+      </div>
+    </div>    
 
+    <div class="wrp__task2">
+      <h3>Task 2</h3>
+      <div class="wrp__f1">
+        <span>ax<sup>2</sup> + bx + c = 0</span>
+      </div>
+      <div class="wrp__f2">
+        <span>D = b<sup>2</sup> - 4ac</span>
+      </div>
+      
+      <div class="wrp__f3">
+        <div class="wrp__f3x1">
+          <span>X1 = </span>
+        </div>
+        <div class="wrp__fraction">
+          <span>-b -&#8730(4*a*c)</span>
+          <span>2a</span>
+        </div>
       </div>
 
-    </div>    
+    </div>
+
+
+
+
   </section>
   
 

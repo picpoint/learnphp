@@ -98,11 +98,13 @@ gulp.task('grid', function () {
 });
 
 
+
+
 gulp.task('browserSync', function () {
 		browserSync.init({
 			server: {
           baseDir: settings.dist
-          // proxy: "http://localhost/pp/dist/"
+          // proxy: 'http://tsk/dist/'
 			}
 		});
 });

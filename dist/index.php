@@ -11,8 +11,7 @@
   <section class="wrp">    
     <div class="wrp__task1">
       
-      <div class="wrp__and">
-        
+      <div class="wrp__and">        
         <div class="wrp__frststr">
           <span>a</span>
           <span>b</span>
@@ -22,30 +21,76 @@
         <div class="wrp__scndtstr">
           <span>0</span>
           <span>0</span>
-          <span>0</span>
+          <span>
+            <?php
+              include "./functions.php";
+              conuction(false, false);
+            ?>
+          </span>
         </div>
 
         <div class="wrp__thrdstr">
           <span>1</span>
           <span>0</span>
-          <span>0</span>
+          <span>
+            <?php            
+              conuction(true, false);
+            ?>
+          </span>
         </div>
 
         <div class="wrp__frtstr">
           <span>0</span>
           <span>1</span>
-          <span>0</span>
+          <span>
+            <?php            
+              conuction(false, true);
+            ?>
+          </span>
         </div>
 
         <div class="wrp__fvstr">
           <span>1</span>
           <span>1</span>
-          <span>1</span>
+          <span>
+            <?php            
+              conuction(true, true);
+            ?>
+          </span>
+        </div>
+      </div>
+
+      <div class="wrp__or">
+        <div class="wrp__frststr">
+          <span>a</span>
+          <span>b</span>
+          <span>a || b</span>
+        </div>
+        
+        <div class="wrp__scndtstr">
+          <span>0</span>
+          <span>0</span>
+          <span>
+            <?php
+              disunction(false, false);
+            ?>
+          </span>
         </div>
 
-        
+        <div class="wrp__thrdstr">
+          <span>1</span>
+          <span>0</span>
+          <span>
+            <?php            
+              disunction(true, false);
+            ?>
+          </span>
+        </div>
+
 
       </div>
+
+
 
     </div>
     

@@ -28,3 +28,6 @@ function exor($x, $y) {
     echo(0);
   }
 }
+
+
+

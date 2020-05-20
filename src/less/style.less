@@ -103,6 +103,10 @@
       border: @border;
       font-size: 1.5rem;
       font-style: italic;      
+        input {
+          width: 25px;
+          text-align: center;
+        }
     }
   }
 
@@ -121,13 +125,14 @@
     margin-top: 20px;    
   }
   &__f3x1 {
+    border: @border;
     display: flex;
     span {
       font-size: 1.5rem;
     }
   }
   &__fraction {
-    // border: @border;
+    border: @border;
     display: flex;    
     flex-direction: column;
     align-content: center;
@@ -138,11 +143,46 @@
       text-align: center;
     }
   }
-  
+  &__f3x1out {
+    border: @border;
+    display: flex;    
+    align-items: center;
+    margin: 0 5px;
+      span {
 
+      }
+  }
 
+  &__f4 {
+    border: @border;
+    display: flex;
+    margin-top: 20px;    
+  }
+  &__f3x2 {
+    display: flex;
+    span {
+      font-size: 1.5rem;
+    }
+  }
+  &__f3x2out {
+    border: @border;
+    display: flex;    
+    align-items: center;
+    margin: 0 5px;
+      span {
 
+      }
+  }
 
-
+  button {
+    width: 120px;
+    height: 40px;
+    margin-top: 30px;
+    border-radius: 7px;
+    // border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: @lightgray;
+  }
   
 }

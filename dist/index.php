@@ -163,7 +163,11 @@
         <span><input type="text" name="a" placeholder="a">x<sup>2</sup> + <input type="text" name="b" placeholder="b">x + <input type="text" name="c" placeholder="c"> = 0</span>
       </div>
       <div class="wrp__f2">
-        <span>D = b<sup>2</sup> - 4ac =</span> <span class="outdisc">?</span>
+        <span>D = b<sup>2</sup> - 4ac =</span> <span class="outdisc">
+          <?php
+            echo(discreminant(2, 5, -7));            
+          ?>
+        </span>
       </div>
       
       <div class="wrp__f3">
@@ -182,7 +186,7 @@
 
       <div class="wrp__f4">
         <div class="wrp__f3x2">
-          <span>X1 = </span>
+          <span>X2 = </span>
         </div>
         <div class="wrp__fraction">
           <span> -b +&#8730D</span>

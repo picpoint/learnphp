@@ -31,13 +31,14 @@ function exor($x, $y) {
 
 
 
-function discreminant() {
-  
+
+
+function discreminant() {  
   if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $a = $_POST['a'];
     $b = $_POST['b'];
     $c = $_POST['c']; 
-    $discrim = $b*$b - 4*$a*$c;
+    $discrim = 0;
 
     if(empty($a) || empty($b) || empty($c)) {
       $a = $b = $c = 0; 
@@ -58,6 +59,7 @@ function discreminant() {
 
 }
 
-
+// assert(1 == maxnumber(1, -1));
+assert();
 
 

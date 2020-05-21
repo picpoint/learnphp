@@ -59,7 +59,12 @@ function discreminant() {
 
 }
 
-// assert(1 == maxnumber(1, -1));
-assert();
+
+assert(true == discreminant(2, 5, -7));
+assert(false == empty(discreminant()));
+// assert('Не имеет решения' == discreminant(0, 0, 0)[0]);
+// assert(0 > discreminant(5, 5, 5)[0]);
+
+
 
 

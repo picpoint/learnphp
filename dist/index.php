@@ -170,7 +170,8 @@
         <div class="wrp__f2">
           <span>D = b<sup>2</sup> - 4ac =</span> <span class="outdisc">
             <?php                            
-              echo(discreminant());
+              // echo(discreminant());
+              echo(discreminant()[0]);
             ?>
           </span>
         </div>
@@ -185,7 +186,11 @@
           </div>
           <div class="wrp__f3x1out">
             <span>=</span>
-            <span>?</span>
+            <span>
+              <?php
+                echo(discreminant()[1]);
+              ?>
+            </span>
           </div>
         </div>
 
@@ -199,7 +204,11 @@
           </div>
           <div class="wrp__f3x2out">
             <span>=</span>
-            <span>?</span>
+            <span>
+              <?php
+                echo(discreminant()[2]);
+              ?>
+            </span>
           </div>
         </div>
 

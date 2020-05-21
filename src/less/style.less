@@ -13,19 +13,19 @@
 
 ////////// MIXINS BLOCK START
 .mixinstr {
-  //border: @border;
-    display: flex;        
-    height: 20%;    
-    span {
-      border: @border;      
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-self: center;
-      height: 100%;
-      width: 33%;
-      font-size: 1.1rem;
-    }
+  // border: 1px solid @gray;
+  display: flex;        
+  height: 20%;          
+  span {
+    border: 1px solid @gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: 100%;
+    width: 33%;
+    font-size: 1.1rem;      
+  }    
 }
 ////////// MIXINS BLOCK END
 
@@ -40,52 +40,60 @@
     font-weight: bold;
     margin-top: 50px;
   }
-  &__task1 {
-    border: @border;
+  &__task1 {    
+    // border: 1px solid @gray;
     display: flex;        
-    justify-content: center;    
+    justify-content: center;        
+    border-radius: 5px;
     width: 50%;
   }
   &__and {
-    border: @border;
+    // border: @border;
     width: 200px;
     height: 250px;    
     margin: 10px;
   }
   &__frststr {
     .mixinstr();
-    font-weight: bolder;
+    font-weight: bolder;    
   }  
   &__scndtstr {
     .mixinstr();
+    span {
+      background-color: @gray;
+    }
   }    
   &__thrdstr {
     .mixinstr();    
+    span {
+      background-color: @lightgray;
+    }
   }
   &__frtstr {
     .mixinstr();
+    span {
+      background-color: @gray;
+    }
   }
   &__fvstr {
     .mixinstr();
-  }
-  
-  &__or {
-    border: @border;
+    span {
+      background-color: @lightgray;
+    }
+  }  
+  &__or {    
     width: 200px;
     height: 250px;
     margin: 10px;
   }
-
-  &__xor {
-    border: @border;
+  &__xor {    
     width: 200px;
     height: 250px;
     margin: 10px;
-  }
-  
+  }  
 
   &__task2 {
-    border: @border;
+    // border: @border;
     display: flex;        
     flex-direction: column;
     align-items: center;
@@ -95,17 +103,17 @@
       margin-bottom: 20px;
     }   
   }
-  // &__formsend {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  // }
+  &__formsend {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__f1 {
     display: flex;
     margin-bottom: 20px;
     span {      
-      border: @border;
+      // border: @border;
       font-size: 1.5rem;
       font-style: italic;      
         input {
@@ -119,20 +127,20 @@
     display: flex;
     justify-content: center;
     span {      
-      border: @border;
+      // border: @border;
       font-size: 1.5rem;
       font-style: italic;      
     }
   }
 
   &__f3 {
-    border: @border;
+    // border: @border;
     display: flex;
     justify-content: center;
     margin-top: 20px;    
   }
   &__f3x1 {
-    border: @border;
+    // border: @border;
     display: flex;
     align-items: center;
     span {
@@ -140,7 +148,7 @@
     }
   }
   &__fraction {
-    border: @border;
+    // border: @border;
     display: flex;    
     flex-direction: column;
     align-content: center;
@@ -154,17 +162,14 @@
     }
   }
   &__f3x1out {
-    border: @border;
+    // border: @border;
     display: flex;    
     align-items: center;
-    margin: 0 5px;
-      span {
-
-      }
+    margin: 0 5px;      
   }
 
   &__f4 {
-    border: @border;
+    // border: @border;
     display: flex;
     justify-content: center;
     margin-top: 20px;    
@@ -177,13 +182,13 @@
     }
   }
   &__f3x2out {
-    border: @border;
+    // border: @border;
     display: flex;    
     align-items: center;
     margin: 0 5px;      
   }
 
-  button {
+  button {    
     width: 120px;
     height: 40px;
     margin-top: 30px;

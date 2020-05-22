@@ -1,5 +1,10 @@
 <?php
 
+include_once "index.php";
+// include_once "index.php";
+// require "index.php";
+// require_once "index.php";
+
 function conuction($x, $y) {
   $z = $x && $y;
   if($z == true) {
@@ -60,8 +65,8 @@ function discreminant() {
 }
 
 
-assert(true == discreminant(2, 5, -7));
-assert(false == empty(discreminant()));
+// assert(true == discreminant(2, 5, -7));
+// assert(false == empty(discreminant()));
 // assert('Не имеет решения' == discreminant(0, 0, 0)[0]);
 // assert(0 > discreminant(5, 5, 5)[0]);
 

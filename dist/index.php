@@ -23,7 +23,7 @@
           <span>0</span>
           <span>
             <?php
-              include "./functions.php";
+              include "functions.php";
               conuction(false, false);
             ?>
           </span>

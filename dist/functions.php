@@ -64,7 +64,6 @@ function discreminant() {
 
 }
 
-
 // assert(true == discreminant(2, 5, -7));
 // assert(false == empty(discreminant()));
 // assert('Не имеет решения' == discreminant(0, 0, 0)[0]);
@@ -73,3 +72,13 @@ function discreminant() {
 
 
 
+
+function genderDefination() {
+  $name = $_POST["inpname"];
+  if(empty($name)) {
+    return "Вы ничего не ввели";
+  } else {
+    return $name; 
+  }  
+  
+}

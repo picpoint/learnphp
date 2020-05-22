@@ -159,7 +159,7 @@
 
     <div class="wrp__task2">
       <h3>Task 2</h3>
-      <form action="index.php" method="POST" class="wrp__formsend">
+      <form method="POST" class="wrp__formsend">
         <div class="wrp__f1">        
           <span>
             <input type="text" name="a" placeholder="a">x<sup>2</sup> + 
@@ -169,8 +169,7 @@
         </div>
         <div class="wrp__f2">
           <span>D = b<sup>2</sup> - 4ac =</span> <span class="outdisc">
-            <?php                            
-              // echo(discreminant());
+            <?php                                          
               echo(discreminant()[0]);
             ?>
           </span>
@@ -212,10 +211,26 @@
           </div>
         </div>
 
-        <button type="submit">Вычислить</button>
-        
+        <button type="submit" name="calculate">Вычислить</button>        
       </form>
 
+    </div>
+
+    <div class="wrp__task4">
+      <h3>* Task 4</h3>
+      <div class="wrp__namesblock">
+        <form method="POST" class="wrp__namesform">
+          <input type="text" name="inpname" placeholder="Введите имя">        
+          <button type="submit" name="inpbtn">Определить</button>
+          <div class="wrp__namesout">
+            <span>
+              <?php                
+                echo(genderDefination());
+              ?>
+            </span>
+          </div>
+        </form>
+      </div>
     </div>
 
 

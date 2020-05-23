@@ -1,12 +1,12 @@
 <?php
 
-include_once "index.php";
-// include_once "index.php";
-// require "index.php";
-// require_once "index.php";
+include_once "index.php";                                                                  // подключение файла
+// include_once "index.php";                                                               // проверка подключения файлов по заданию 3
+// require "index.php";                                                                    // |-  --||-- --||--
+// require_once "index.php";                                                               // |-  --||-- --||--
 
-function conuction($x, $y) {
-  $z = $x && $y;
+function conuction($x, $y) {                                                               // ф-ия коньюкции.
+  $z = $x && $y;                                                                           // принимает на вход 2 значения, делает их коньюкцию и выдаёт нужный результат
   if($z == true) {
     echo(1);
   } else {
@@ -15,8 +15,8 @@ function conuction($x, $y) {
 }
 
 
-function disunction($x, $y) {
-  $z = $x || $y;
+function disunction($x, $y) {                                                               // ф-ия дизьюнкции
+  $z = $x || $y;                                                                            // принимает на вход 2 значения, делает их коньюкцию и выдаёт нужный результат
   if($z == true) {
     echo(1);
   } else {
@@ -25,8 +25,8 @@ function disunction($x, $y) {
 }
 
 
-function exor($x, $y) {
-  $z = $x ^ $y;
+function exor($x, $y) {                                                                      // ф-ия исключающего ИЛИ
+  $z = $x ^ $y;                                                                              // принимает на вход 2 значения, делает их коньюкцию и выдаёт нужный результат
   if($z == true) {
     echo(1);
   } else {
@@ -38,33 +38,33 @@ function exor($x, $y) {
 
 
 
-function discreminant() {  
+function discreminant() {                                                                     // ф-ия решения квадратного уравнения дискрименанта
   $discrim = "";
   $x1 = "";
   $x2 = "";
 
-  if(isset($_POST["task2"])) {
-    $a = $_POST["a"];
+  if(isset($_POST["task2"])) {                                                                // если существует переменная отличная от 0
+    $a = $_POST["a"];                                                                         // записываем в переменные значения из пришедших полей
     $b = $_POST["b"];
     $c = $_POST["c"];
-    if(empty($a) || empty($b) || empty($c)) {
-      $discrim = " ";
+    if(empty($a) || empty($b) || empty($c)) {                                                 // если переменные пустые 
+      $discrim = " ";                                                                         // выводим пустые поля
       $x1 = " ";
       $x2 = " ";
-    } else {
+    } else {                                                                                  // решаем квадратное уравнение
       $discrim = $b*$b - 4*$a*$c;
-      if($discrim < 0) {
+      if($discrim < 0) {                                                                      // есди дискрименант отрицательный, то ф-ия не имеет корней уравнения
         $x1 = $x2 = "Нет корней уравнения";
-      } else {
-        $x1 = (-$b - sqrt($discrim)) / (2*$a);
+      } else { 
+        $x1 = (-$b - sqrt($discrim)) / (2*$a);                                                // иначе находим корни уравнения
         $x2 = (-$b + sqrt($discrim)) / (2*$a);
       }      
     }    
-    return array($discrim, $x1, $x2);
+    return array($discrim, $x1, $x2);                                                         // возвращаем массив переменных для вывода
   }
 
 
-  return array($discrim, $x1, $x2);
+  return array($discrim, $x1, $x2);                                                           // возвращаем массив переменных для вывода
 }
 
 // assert(true == discreminant(2, 5, -7));
@@ -76,27 +76,27 @@ function discreminant() {
 
 
 
-function genderDefination() {
+function genderDefination() {                                                                // ф-ия определения пола по имени
 
-  if(isset($_POST["task4"])) {
-    $name = mb_strtolower($_POST["inpname"]);    
-    $lastSymbol = mb_substr($name, -1);
-    $arrwoman = array("а", "у", "е", "c", "э", "з", "и");
-    $arrman = array("н", "л", "п", "д", "й");    
+  if(isset($_POST["task4"])) {                                                               // если существует переменная 
+    $name = mb_strtolower($_POST["inpname"]);                                                // имя из поля переводим в нижний регистр
+    $lastSymbol = mb_substr($name, -1);                                                      // записываем в переменную последний символ слова
+    $arrwoman = array("а", "у", "е", "c", "э", "з", "и");                                    // массив букв чаще встречающихся в женских именах
+    $arrman = array("н", "л", "п", "д", "й");                                                // массив букв чаще встречающихся в мужских именах
 
-    for ($i = 0; $i < count($arrwoman); $i++) {
-      if($arrwoman[$i] == $lastSymbol) {
-        return "Это женское имя. <br>Пол: женский";
+    for ($i = 0; $i < count($arrwoman); $i++) {                                              // пробегаемся по женскому массиву
+      if($arrwoman[$i] == $lastSymbol) {                                                     // если i-й элемент == последнему символу из введённого слова
+        return "Это женское имя. <br>Пол: женский";                                          // выводим соответствующее определение
       } 
     }
 
-    for($x = 0; $x < count($arrman); $x++) {
-      if($arrman[$x] == $lastSymbol) {
-        return "Это мужское имя. <br>Пол: мужской";
+    for($x = 0; $x < count($arrman); $x++) {                                                 // пробегаемся по мужскому массиву
+      if($arrman[$x] == $lastSymbol) {                                                       // если х-й элемент == последнему символу из введённого слова
+        return "Это мужское имя. <br>Пол: мужской";                                          // выводим соответствующее определение
       }
     }
 
-    return "Пол не определён";    
+    return "Пол не определён";                                                               // если ни один из циклов не сработали, выводим соответствующее определение
   } 
 
   return "";

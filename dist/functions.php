@@ -77,33 +77,34 @@ function discreminant() {
 
 
 function genderDefination() {
+
+  // $arrwooman = array("а", "я", "ь", "у", "е", "и", "с", "э", "з");
+  // $arrman = array("л", "п", "и", "д");  
+
   if(isset($_POST["task4"])) {
     $name = mb_strtolower($_POST["inpname"]);
-    $arrwooman = array("а", "я", "ь", "у", "е", "и", "с", "э", "з");
-    $arrman = array("л", "п", "и", "д");
 
     if(empty($name)) {
       return "Введите имя";
-    } elseif(mb_strrpos($name, "а") || mb_strrpos($name, "я") || mb_strrpos($name, "ь") || mb_strrpos($name, "у")) {
+    } elseif(mb_strrpos($name, "а") || mb_strrpos($name, "у") || mb_strrpos($name, "е") || mb_strrpos($name, "и")) {
       return "Это женское имя";
+    } elseif(mb_strrpos($name, "л") || mb_strrpos($name, "п") || mb_strrpos($name, "д") || mb_strrpos($name, "н")) {
+      return "Это мужское имя";
     } else {
-      return "Скорее всего мужское имя";
-    }
-  
-    //return $_POST["inpname"];
-  } else {
-    return " ";
+      return "Пол не определён";
+    }    
   }  
+
 }
 
 
 /*
 Женские имена(окончания)
-а, я, ь, у, е, и, с, э, з,      +"н", +"т", +"р", +"м", +"й"
+а, у, е, с, э, з,      +"н", +"т", +"р", +"м", +"й", +"ь", +"я", +"и"
 
 Мужские имена(окончания)
-л, п, и, д,                      +н, +м, +т, +р, +"й"
+л, п, д,                      +н, +м, +т, +р, +"й", +"ь", +"я", +"и"
 
-сходство букв - т, н, м, р, 
+сходство букв - +"н", +"т", +"р", +"м", +"й", +"ь", +"я", +"и"
 
 */

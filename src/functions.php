@@ -78,7 +78,7 @@ function discreminant() {
 
 function genderDefination() {
   if(isset($_POST["task4"])) {
-    $name = $_POST["inpname"];
+    $name = mb_strtolower($_POST["inpname"]);
     $arrwooman = array("а", "я", "ь", "у", "е", "и", "с", "э", "з");
     $arrman = array("л", "п", "и", "д");
 

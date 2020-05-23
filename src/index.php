@@ -211,7 +211,7 @@
           </div>
         </div>
 
-        <button type="submit" name="calculate">Вычислить</button>        
+        <input type="submit" name="task2" value="Вычислить"></input>
       </form>
 
     </div>
@@ -221,7 +221,7 @@
       <div class="wrp__namesblock">
         <form method="POST" class="wrp__namesform">
           <input type="text" name="inpname" placeholder="Введите имя">        
-          <button type="submit" name="inpbtn">Определить</button>
+          <input type="submit" name="task4" value="Определить"></input>
           <div class="wrp__namesout">
             <span>
               <?php                

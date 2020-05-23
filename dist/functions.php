@@ -39,29 +39,32 @@ function exor($x, $y) {
 
 
 function discreminant() {  
-  if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $a = $_POST['a'];
-    $b = $_POST['b'];
-    $c = $_POST['c']; 
-    $discrim = 0;
+  $discrim = "";
+  $x1 = "";
+  $x2 = "";
 
+  if(isset($_POST["task2"])) {
+    $a = $_POST["a"];
+    $b = $_POST["b"];
+    $c = $_POST["c"];
     if(empty($a) || empty($b) || empty($c)) {
-      $a = $b = $c = 0; 
-      $discrim = 'Не имеет решения';
-      $x1 = 'Не имеет корня уровнения';
-      $x2 = 'Не имеет корня уровнения';      
-    } elseif($discrim < 0) {
-      $x1 = 'x1 не имеет решений...';
-      $x2 = 'x2 не имеет решений...';
+      $discrim = " ";
+      $x1 = " ";
+      $x2 = " ";
     } else {
       $discrim = $b*$b - 4*$a*$c;
-      $x1 = (-$b - sqrt($discrim)) / (2*$a);
-      $x2 = (-$b + sqrt($discrim)) / (2*$a);
+      if($discrim < 0) {
+        $x1 = $x2 = "Нет корней уравнения";
+      } else {
+        $x1 = (-$b - sqrt($discrim)) / (2*$a);
+        $x2 = (-$b + sqrt($discrim)) / (2*$a);
+      }      
     }    
-
     return array($discrim, $x1, $x2);
-  }  
+  }
 
+
+  return array($discrim, $x1, $x2);
 }
 
 // assert(true == discreminant(2, 5, -7));
@@ -74,11 +77,33 @@ function discreminant() {
 
 
 function genderDefination() {
-  $name = $_POST["inpname"];
-  if(empty($name)) {
-    return "Вы ничего не ввели";
-  } else {
-    return $name; 
-  }  
+  if(isset($_POST["task4"])) {
+    $name = $_POST["inpname"];
+    $arrwooman = array("а", "я", "ь", "у", "е", "и", "с", "э", "з");
+    $arrman = array("л", "п", "и", "д");
+
+    if(empty($name)) {
+      return "Введите имя";
+    } elseif(mb_strrpos($name, "а") || mb_strrpos($name, "я") || mb_strrpos($name, "ь") || mb_strrpos($name, "у")) {
+      return "Это женское имя";
+    } else {
+      return "Скорее всего мужское имя";
+    }
   
+    //return $_POST["inpname"];
+  } else {
+    return " ";
+  }  
 }
+
+
+/*
+Женские имена(окончания)
+а, я, ь, у, е, и, с, э, з,      +"н", +"т", +"р", +"м", +"й"
+
+Мужские имена(окончания)
+л, п, и, д,                      +н, +м, +т, +р, +"й"
+
+сходство букв - т, н, м, р, 
+
+*/

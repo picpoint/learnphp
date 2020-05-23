@@ -81,19 +81,25 @@ function genderDefination() {
   if(isset($_POST["task4"])) {
     $name = mb_strtolower($_POST["inpname"]);    
     $lastSymbol = mb_substr($name, -1);
+    $arrwoman = array("а", "у", "е", "c", "э", "з", "и");
+    $arrman = array("н", "л", "п", "д", "й");    
 
-    if($lastSymbol == "а" || $lastSymbol == "у" || $lastSymbol == "е" || $lastSymbol == "c" || $lastSymbol == "э" || $lastSymbol == "з" || $lastSymbol == "и") {
-      return "Это женское имя. <br>Пол: женский";
-    } elseif($lastSymbol == "н" || $lastSymbol == "л" || $lastSymbol == "п" || $lastSymbol == "д" || $lastSymbol == "й" || $lastSymbol == "с") {
-      return "Это мужское имя. <br>Пол: мужской";
-    } else {
-      return "Пол не определён";
-    }    
+    for ($i = 0; $i < count($arrwoman); $i++) {
+      if($arrwoman[$i] == $lastSymbol) {
+        return "Это женское имя. <br>Пол: женский";
+      } 
+    }
 
+    for($x = 0; $x < count($arrman); $x++) {
+      if($arrman[$x] == $lastSymbol) {
+        return "Это мужское имя. <br>Пол: мужской";
+      }
+    }
+
+    return "Пол не определён";    
   } 
 
   return "";
-
 }
 
 

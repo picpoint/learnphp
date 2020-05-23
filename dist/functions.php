@@ -78,33 +78,37 @@ function discreminant() {
 
 function genderDefination() {
 
-  // $arrwooman = array("а", "я", "ь", "у", "е", "и", "с", "э", "з");
-  // $arrman = array("л", "п", "и", "д");  
-
   if(isset($_POST["task4"])) {
-    $name = mb_strtolower($_POST["inpname"]);
+    $name = mb_strtolower($_POST["inpname"]);    
+    $lastSymbol = mb_substr($name, -1);
 
-    if(empty($name)) {
-      return "Введите имя";
-    } elseif(mb_strrpos($name, "а") || mb_strrpos($name, "у") || mb_strrpos($name, "е") || mb_strrpos($name, "и")) {
-      return "Это женское имя";
-    } elseif(mb_strrpos($name, "л") || mb_strrpos($name, "п") || mb_strrpos($name, "д") || mb_strrpos($name, "н")) {
-      return "Это мужское имя";
+    if($lastSymbol == "а" || $lastSymbol == "у" || $lastSymbol == "е" || $lastSymbol == "c" || $lastSymbol == "э" || $lastSymbol == "з" || $lastSymbol == "и") {
+      return "Это женское имя. <br>Пол: женский";
+    } elseif($lastSymbol == "н" || $lastSymbol == "л" || $lastSymbol == "п" || $lastSymbol == "д" || $lastSymbol == "й" || $lastSymbol == "с") {
+      return "Это мужское имя. <br>Пол: мужской";
     } else {
       return "Пол не определён";
     }    
-  }  
+
+  } 
+
+  return "";
 
 }
 
 
 /*
 Женские имена(окончания)
-а, у, е, с, э, з,      +"н", +"т", +"р", +"м", +"й", +"ь", +"я", +"и"
+а, у, е, с, э, з,      +"н", +"т", +"р", +"м", +"ь", +"я", +"и"
 
 Мужские имена(окончания)
-л, п, д,                      +н, +м, +т, +р, +"й", +"ь", +"я", +"и"
+л, п, д,               +н, +м, +т, +р, +"й", +"ь", +"я", +"и"
 
-сходство букв - +"н", +"т", +"р", +"м", +"й", +"ь", +"я", +"и"
-
+Совпадения
++"н" - Жасмин, Ляйсан            Семён, Алан
++"т" - Анаит, Гульшат            Азамат, Ашот
++"р" - Айнур, Дженифер           Виктор, Амир
++"м" - Дилярам, Мариям           Ефим, Артём
++"ь" - Любовь, Гузель            Игорь, Даниэль
++"я" - Аля, Агния                Добрыня, Илья
 */

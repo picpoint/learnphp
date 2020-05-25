@@ -33,11 +33,20 @@
         </div>
         <div class="wrp__result">
           <input type="submit" name="calc" class="btncalc" value="Вычислить">
-        </div>
-        
+        </div>        
       </form>
 
     </div>
+
+    <div class="wrp__task2">
+      <h3>Task 2</h3>
+      <div class="wrp__galery">
+        <?php
+          galeryImg();
+        ?>
+      </div>
+    </div>
+    
   </section>  
 
 <script src="js/calculate.js"></script>

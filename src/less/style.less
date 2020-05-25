@@ -12,27 +12,30 @@
 }
 
 ////////// MIXINS BLOCK START
-
+.mixintasks {
+  border: @border;
+  display: flex;
+  flex-direction: column;    
+  align-items: center;  
+  width: 50%;
+  margin-top: 30px;
+    h3 {
+      height: 20%;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+}
 ////////// MIXINS BLOCK END
+
 
 .wrp {
   // border: @border;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   &__task1 {
-    border: @border;
-    display: flex;
-    flex-direction: column;    
-    align-items: center;
-    // height: 300px;
-    width: 50%;
-    margin-top: 30px;
-      h3 {
-        height: 20%;
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin: 20px 0;
-      }
+    .mixintasks();
   }
   &__formtask1 {
     // border: @border;
@@ -64,5 +67,10 @@
     justify-content: center;
     margin: 20px 0;    
   }
+
+  &__task2 {
+    .mixintasks();
+  }
+  
   
 }

@@ -14,7 +14,7 @@
       
       <form method="GET" class="wrp__formtask1">
         <div class="wrp__calculator">
-          <input type="text" name="onenumber" class="onenumber" value="">
+          <input type="text" name="onenumber" class="onenumber" value="<?= !empty($_GET['onenumber']) ? $_GET['onenumber'] : ''?>">
           <select name="operations" id="oprt" class="operations">
             <option value=""></option>
             <option value="+">+</option>
@@ -22,7 +22,7 @@
             <option value="*">*</option>
             <option value="/">/</option>
           </select>
-          <input type="text" name="twonumber" class="twonumber" value="">
+          <input type="text" name="twonumber" class="twonumber" value="<?= !empty($_GET['twonumber']) ? $_GET['twonumber'] : ''?>">
           <span>=</span>
           <span class="wrp__outres">
             <?php

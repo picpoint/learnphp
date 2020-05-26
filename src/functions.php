@@ -31,4 +31,5 @@ function galeryImg() {
   foreach($mass as $key => $value) {    
     echo(" <a href='#'> <img src=pict/".$value."> </a> ");
   }
+  
 }

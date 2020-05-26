@@ -29,7 +29,7 @@ function galeryImg() {
   $mass = [1=>'01.jpg', 2=>'02.jpg', 3=>'03.jpg', 4=>'04.jpg'];
   
   foreach($mass as $key => $value) {    
-    echo(" <a href='#'> <img src=pict/".$value."> </a> ");
+    echo(" <a href='?id=$key'> <img src=pict/".$value."> </a> ");
   }
   
 }

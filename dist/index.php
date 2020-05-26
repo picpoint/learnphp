@@ -40,7 +40,7 @@
 
     <div class="wrp__task2">
       <h3>Task 2</h3>
-      <div class="wrp__galery">
+      <div class="wrp__galery">        
         <?php
           galeryImg();
         ?>

@@ -18,5 +18,18 @@
 
 .wrp {
   border: @border;
+  display: flex;
+  justify-content: center;
   height: 100vh;
+  &__formblock {
+    border: @border;
+    width: 50%;
+    height: 150px;
+    input {
+      margin: 20px;
+    }
+    button {
+      margin: 20px;
+    }
+  }
 }

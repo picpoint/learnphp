@@ -9,13 +9,15 @@
 <body>
 
   <section class="wrp">        
-    <div class="wrp__formblock">
-      <form action="functions.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="upload">
-        <br>
-        <button type="submit">Отправить</button>
-      </form>
-    </div>  
+    <div class="wrp__task1">
+      <h3>Task1</h3>
+      <div class="wrp__guestblock">
+        <?php
+          require_once 'functions.php';
+          readGuestBook();
+        ?>
+      </div>
+    </div>
   </section>  
 
 </body> 

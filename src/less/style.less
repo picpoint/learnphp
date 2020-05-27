@@ -3,7 +3,7 @@
 
 .reset();
 
-.wrapper {  // центрущая обертка
+.wrapper { 
 	.wrapper();
 }
 
@@ -12,82 +12,11 @@
 }
 
 ////////// MIXINS BLOCK START
-.mixintasks {
-  border: @border;
-  display: flex;
-  flex-direction: column;    
-  align-items: center;  
-  width: 50%;
-  margin-top: 30px;
-    h3 {
-      height: 20%;
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin: 20px 0;
-    }
-}
+
 ////////// MIXINS BLOCK END
 
 
 .wrp {
-  // border: @border;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  &__task1 {
-    .mixintasks();
-  }
-  &__formtask1 {
-    // border: @border;
-    display: flex;
-    flex-direction: column;
-  }
-  &__calculator {
-    // border: @border;
-    display: flex;
-    justify-content: center;
-    height: 80%;
-    width: 100%;
-      input {
-        width: 50px;
-        height: 20px;    
-        margin: 0 5px;
-      }
-      select {        
-        width: 50px;
-        height: 23px;    
-      }
-      span {                
-        margin: 0 5px;
-      }
-  }
-  &__result {
-    // border: @border;
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;    
-  }
-
-  &__task2 {
-    .mixintasks();
-  }
-  &__galery {
-    border: @border;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;    
-    width: 100%;
-      a {
-        border: @border;
-        width: 200px;
-        height: 200px;
-        margin: 5px;
-      }
-      img {
-        height: 100%;
-      }
-  }
-  
-  
+  border: @border;
+  height: 100vh;
 }

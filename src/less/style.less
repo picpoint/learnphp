@@ -17,7 +17,7 @@
 
 
 .wrp {
-  border: @border;
+  // border: @border;
   display: flex;
   justify-content: center;
     &__task1 {
@@ -34,9 +34,71 @@
         }
     }
     &__guestblock {
-      border: @border;
-      height: 150px;
+      // border: @border;      
+      display: flex;
+      flex-direction: column;
       width: 100%;
+    }
+    &__userblock {
+      display: flex;
+      flex-direction: column;
+    }
+    &__block {
+      display: flex;
+    }
+    &__usr {
+      // border: @border;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      border-radius: 7px;
+      background-color: @lightgray;
+      width: 15%;
+      height: 100px;
+      font-weight: bold;
+      margin: 5px;
+        img {          
+          height: 70%;
+        }
+    }
+    &__msg {
+      // border: @border;      
+      display: flex;
+      align-items: center;
+      border-radius: 7px;
+      background-color: @lightgray;
+      width: 85%;
+      margin: 5px;
+    }
+
+    &__addnote {
+      // border: @border;
+      display: flex;      
+      justify-content: center;
+      // height: 100px;
+      width: 100%;
+    }
+    &__addnoteform {
+      // border: @border;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      width: 300px;
+      margin-top: 30px;
+        input {
+          width: 300px;
+          height: 30px;
+          margin: 15px 0;
+        }
+        button {
+          margin: 30px 0;
+          width: 150px;
+          height: 40px;
+        }
     }
   
 }

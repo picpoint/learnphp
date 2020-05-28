@@ -11,25 +11,22 @@
   <section class="wrp">        
     <div class="wrp__task1">
       <h3>Task1</h3>
-      <div class="wrp__guestblock">
-        <?php
-          require_once 'functions.php';
-          // print_r(readGuestBook());
-        ?>
-        <div class="wrp__userblock">
-          <span>
-            <?php
-              readGuestBook();
-            ?>
-          </span>
+      <div class="wrp__guestblock">        
+        
+        <div class="wrp__userblock">          
+          <?php
+            require_once "functions.php";
+            readGuestBook();
+          ?>          
+        </div>        
+        <div class="wrp__addnote">
+          <form method="post" class="wrp__addnoteform">
+            <input type="text" name="nameuser" placeholder="Login">
+            <input type="text" name="messageuser" placeholder="message">
+            <button type="submit" name="send">Отправить</button>
+          </form>
         </div>
-        <div class="wrp__usermessage">
-          <span>
-            <?php
-              // readGuestBook();
-            ?>
-          </span>
-        </div>
+
       </div>
     </div>
   </section>  

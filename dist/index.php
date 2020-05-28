@@ -14,8 +14,22 @@
       <div class="wrp__guestblock">
         <?php
           require_once 'functions.php';
-          readGuestBook();
+          // print_r(readGuestBook());
         ?>
+        <div class="wrp__userblock">
+          <span>
+            <?php
+              readGuestBook();
+            ?>
+          </span>
+        </div>
+        <div class="wrp__usermessage">
+          <span>
+            <?php
+              // readGuestBook();
+            ?>
+          </span>
+        </div>
       </div>
     </div>
   </section>  

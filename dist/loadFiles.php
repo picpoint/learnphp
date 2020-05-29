@@ -7,7 +7,7 @@ function loadFile() {
 
     if(0 == $_FILES["loadfield"]["error"]) {
       $fl = $_FILES["loadfield"]["tmp_name"];
-      $path = __DIR__."pict";
+      $path = __DIR__."/pict".$_FILES['loadfield']['name'];
       move_uploaded_file($fl, $path);
     }
 

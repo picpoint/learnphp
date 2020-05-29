@@ -11,7 +11,7 @@ function readGuestBook() {
       $writeData = $nameuser.': '.$messageuser;
       echo($writeData);
       $writeFile = fopen($file, 'a');
-      fwrite($writeFile, $writeData);
+      fwrite($writeFile, "\n".$writeData);
       fclose($writeFile);
     } else {
       echo('Fields is empty');

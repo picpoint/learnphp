@@ -12,26 +12,29 @@
 }
 
 ////////// MIXINS BLOCK START
-
+.mixintasks {
+  border: @border;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin-top: 30px;
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bolder;
+    }
+}
 ////////// MIXINS BLOCK END
 
 
 .wrp {
   // border: @border;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
     &__task1 {
-      border: @border;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 60%;
-      margin-top: 30px;
-        h3 {
-          font-size: 1.5rem;
-          font-weight: bolder;
-        }
+      .mixintasks();
     }
     &__guestblock {
       // border: @border;      
@@ -100,5 +103,36 @@
           height: 40px;
         }
     }
+
+    &__task2 {
+      .mixintasks();
+      justify-content: start;
+      height: 300px;      
+    }
+    &__blockload {
+      // border: @border;      
+      display: flex;
+      justify-content: center;
+      width: 50%;      
+    }
+    &__formload {
+      // border: @border;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 70%;
+      input {
+        margin: 20px;
+      }      
+      button {
+        margin: 20px;
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        outline: none;
+        cursor: pointer;
+      }
+    } 
   
 }

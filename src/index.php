@@ -15,7 +15,7 @@
         
         <div class="wrp__userblock">          
           <?php
-            require_once "functions.php";
+            require_once "readGuestBook.php";
             readGuestBook();
           ?>          
         </div>        
@@ -27,6 +27,21 @@
           </form>
         </div>
 
+      </div>
+    </div>
+    <div class="wrp__task2">
+      <h3>Task 2</h3>
+      <div class="wrp__blockload">
+        <form action="index.php" method="POST" enctype="multipart/form-data" class="wrp__formload">
+          <input type="file" name="loadfield">
+          <button type="submit" name="actionbtn">Load file</button>
+        </form>        
+      </div>
+      <div class="wrp__out">
+        <?php
+          require_once "loadFiles.php";
+          loadFile();
+        ?>
       </div>
     </div>
   </section>  

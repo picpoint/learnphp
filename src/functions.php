@@ -11,7 +11,7 @@ function readGuestBook() {
       $writeData = $nameuser.': '.$messageuser;
       echo($writeData);
       $writeFile = fopen($file, 'a');
-      fwrite($writeFile, "\n".$writeData);
+      fwrite($writeFile, $writeData."\r\n");
       fclose($writeFile);
     } else {
       echo('Fields is empty');
@@ -19,6 +19,7 @@ function readGuestBook() {
   }
   
 
+  
   if(file_exists($file)) {
     $arr = file($file, FILE_IGNORE_NEW_LINES);    
 

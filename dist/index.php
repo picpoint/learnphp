@@ -43,6 +43,12 @@
           loadFile();
         ?>
       </div>
+      <div class="wrp__galery">
+        <?php
+          require_once "showGalery.php";        
+          showImages();
+        ?>
+      </div>
     </div>
   </section>  
 

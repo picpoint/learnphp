@@ -9,47 +9,9 @@
 <body>
 
   <section class="wrp">        
-    <div class="wrp__task1">
-      <h3>Task1</h3>
-      <div class="wrp__guestblock">        
-        
-        <div class="wrp__userblock">          
-          <?php
-            require "readGuestBook.php";
-            readGuestBook();
-          ?>          
-        </div>        
-        <div class="wrp__addnote">
-          <form method="post" class="wrp__addnoteform">
-            <input type="text" name="nameuser" placeholder="Login">
-            <input type="text" name="messageuser" placeholder="message">
-            <button type="submit" name="send">Отправить</button>
-          </form>
-        </div>
-
-      </div>
-    </div>
-    <div class="wrp__task2">
-      <h3>Task 2</h3>
-      <div class="wrp__blockload">
-        <form action="index.php" method="POST" enctype="multipart/form-data" class="wrp__formload">
-          <input type="file" name="loadfield">
-          <button type="submit" name="actionbtn">Load file</button>
-        </form>        
-      </div>
-      <div class="wrp__out">
-        <?php
-          require "loadFiles.php";
-          loadFile();
-        ?>
-      </div>
-      <div class="wrp__galery">
-        <?php
-          require "showGalery.php";        
-          showImages();
-        ?>
-      </div>
-    </div>
+    <?php
+      require "php/test.php";
+    ?>
   </section>  
 
 </body> 

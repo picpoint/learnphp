@@ -11,7 +11,8 @@ const settings = {
 	srcless: './src/less/style.less',
 	srccss: './dist/css',
 	srchtml: './dist/*.php',
-	srcjs: './src/js'
+  srcjs: './src/js',
+  srcphp: './src/php'
 };
 
 
@@ -76,10 +77,17 @@ gulp.task('js', function () {
 		}));
 });
 
+gulp.task('php', function () {
+  gulp.src(settings.srcphp + '/*.php')
+  .pipe(gulp.dest(settings.dist + '/php'))
+  .pipe(browserSync.reload({
+      stream: true
+  }));
+});
+
 
 gulp.task('htmlmin', function () {
- gulp.src('./src/*.php')
-  // .pipe(htmlmin({ collapseWhitespace: true }))
+ gulp.src('./src/*.php')  
   .pipe(gulp.dest('./dist'))
 		.pipe(browserSync.reload({
 				stream: true
@@ -87,9 +95,10 @@ gulp.task('htmlmin', function () {
 });
 
 
-gulp.task('watch', ['preproc', 'js', 'htmlmin', 'browserSync'], function () {
+gulp.task('watch', ['preproc', 'js', 'php', 'htmlmin', 'browserSync'], function () {
 	gulp.watch(settings.srcless, ['preproc']);  
-	gulp.watch(settings.srcjs + '/*.js', ['js']);
+  gulp.watch(settings.srcjs + '/*.js', ['js']);
+  gulp.watch(settings.srcphp + '/*.php', ['php']);
  	gulp.watch('./src/*.php', ['htmlmin']);
 });
 

@@ -15,7 +15,7 @@
         
         <div class="wrp__userblock">          
           <?php
-            require_once "readGuestBook.php";
+            require "readGuestBook.php";
             readGuestBook();
           ?>          
         </div>        
@@ -39,13 +39,13 @@
       </div>
       <div class="wrp__out">
         <?php
-          require_once "loadFiles.php";
+          require "loadFiles.php";
           loadFile();
         ?>
       </div>
       <div class="wrp__galery">
         <?php
-          require_once "showGalery.php";        
+          require "showGalery.php";        
           showImages();
         ?>
       </div>

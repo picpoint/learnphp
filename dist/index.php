@@ -12,7 +12,11 @@
     <?php
       
       require "php/getUsersList.php";
+      require "php/existsUser.php";
+      
       echo(getUsersListFunc());
+      echo(existsUserFunc("Vasya"));
+      
       
     ?>
     

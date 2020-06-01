@@ -1,8 +1,3 @@
-<?php 
-  session_start();
-  setcookie("new_coocki", "new value", time() + 86400);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,11 +10,12 @@
 
   <section class="wrp">        
     <?php
-      $pass = '123';
-      echo(password_hash($pass, PASSWORD_DEFAULT));
+      
+      require "php/getUsersList.php";
+      echo(getUsersListFunc());
+      
     ?>
-
-    <a href="php/test.php">Test page</a>
+    
   </section>  
 
 </body> 

@@ -1,9 +1,14 @@
 <?php
 
+$login = require_once "existsUser.php";
 
-// function сheckPasswordFunc($login, $password) {
-// 	echo("true / false");	
-// }
+function сheckPasswordFunc($login) {
+	return var_dump($login);
+}
 
 
-echo("true / false");	
+// checkPasswordFunc($login);
+
+
+
+// echo("true / false");	

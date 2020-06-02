@@ -11,17 +11,17 @@
   <section class="wrp">        
     <?php
       
-      require "php/getUsersList.php";
-      require "php/existsUser.php";
-      require "php/сheckPassword.php";
+      require_once "php/getUsersList.php";
+      require_once "php/existsUser.php";
+      require_once "php/сheckPassword.php";
       
       echo(getUsersListFunc());
       echo("<br>");
       echo("<br>");
-      echo(existsUserFunc("Abrakadabr"));
+      echo(existsUserFunc("Abrakadabra"));
       echo("<br>");
       echo("<br>");
-      // echo(сheckPasswordFunc());
+      echo(сheckPasswordFunc($login));
       
       
     ?>

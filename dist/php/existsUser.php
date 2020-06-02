@@ -21,7 +21,7 @@ function existsUserFunc($login) {
 
   if(in_array($login, $mass)) {
     echo("<br>");
-    echo("Логин соответствует - $login");
+    echo("Логин соответствует - $login ");
     return $login;
   } else {
     echo("<br>");

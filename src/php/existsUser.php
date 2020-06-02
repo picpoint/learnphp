@@ -8,11 +8,12 @@ function existsUserFunc($login) {
 	$mass = [];
 	
 	foreach($arrUsers as $key => $value) {		
-		$user = explode(": ", $value);			
+    $user = explode(": ", $value);			
+    echo($value);
+    echo("<br>");
 	}
 
-	var_dump($user);
-
+	
 
 	// if(in_array($login, $user)) {
 	// 	echo("Есть такой логин");

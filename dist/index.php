@@ -15,7 +15,9 @@
       require "php/existsUser.php";
       
       echo(getUsersListFunc());
-      echo(existsUserFunc("Vasya"));
+      echo("<br>");
+      echo("<br>");
+      echo(existsUserFunc("Bormaglot"));
       
       
     ?>

@@ -13,11 +13,15 @@
       
       require "php/getUsersList.php";
       require "php/existsUser.php";
+      require "php/сheckPassword.php";
       
       echo(getUsersListFunc());
       echo("<br>");
       echo("<br>");
-      echo(existsUserFunc("Bormaglot"));
+      echo(existsUserFunc("Abrakadabr"));
+      echo("<br>");
+      echo("<br>");
+      // echo(сheckPasswordFunc());
       
       
     ?>

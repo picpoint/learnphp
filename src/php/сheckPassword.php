@@ -2,12 +2,13 @@
 
 $login = require_once "existsUser.php";
 
+
 function сheckPasswordFunc($login) {
-	return var_dump($login);
+	return $login;
 }
 
 
-// checkPasswordFunc($login);
+//checkPasswordFunc($login);
 
 
 

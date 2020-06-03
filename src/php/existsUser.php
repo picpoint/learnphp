@@ -15,22 +15,20 @@ function existsUserFunc($login) {
         array_push($mass, $value);
       }
     }
-  }
-
-  var_dump($mass);
+  }  
 
   if(in_array($login, $mass)) {
     echo("<br>");
     echo("Логин соответствует - $login ");
+    echo("<br>");
     return $login;
   } else {
     echo("<br>");
     echo("логина нет в БД...  Введённое значение - $login");
     echo("<br>");
-    return 'not';
+    return false;
   }
   
-
-
-
 }
+
+echo(existsUserFunc("kadabra"));

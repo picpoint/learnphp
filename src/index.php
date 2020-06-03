@@ -12,13 +12,13 @@
     <?php
       
       require_once "php/getUsersList.php";
-      require_once "php/existsUser.php";
+      // require_once "php/existsUser.php";
       require_once "php/сheckPassword.php";
       
-      echo(getUsersListFunc());
+      // echo(getUsersListFunc());
       echo("<br>");
       echo("<br>");
-      echo(existsUserFunc("Abrakadabra"));
+      // echo(existsUserFunc("Abrakadabra"));
       echo("<br>");
       echo("<br>");
       echo(сheckPasswordFunc($login));

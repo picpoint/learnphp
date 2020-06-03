@@ -6,7 +6,7 @@ function getUsersListFunc() {
   $content = file($db);
   $users = [];
   $pass = [];
-  	
+    	
 	foreach($content as $key => $value) {
     echo("<br>");
     $res = explode(": ", $value);
@@ -18,7 +18,6 @@ function getUsersListFunc() {
         array_push($pass, $value);
       }
     }
-
   }
    
   $result = array_combine($users, $pass);
@@ -26,7 +25,6 @@ function getUsersListFunc() {
   foreach($result as $key => $value) {
     echo("$key - $value" . "HASH =>" . password_hash($value, PASSWORD_DEFAULT));
     echo("<br>");
-  }
-    
+  }    
   
 }

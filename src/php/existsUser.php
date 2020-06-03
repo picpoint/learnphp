@@ -1,5 +1,5 @@
 <?php
-
+// session_start();
 
 
 function existsUserFunc($login) {
@@ -21,14 +21,16 @@ function existsUserFunc($login) {
     echo("<br>");
     echo("Логин соответствует - $login ");
     echo("<br>");
-    return $login;
+    $_SESSION['login'] = $login;
+    // return $login;
   } else {
     echo("<br>");
     echo("логина нет в БД...  Введённое значение - $login");
     echo("<br>");
-    return false;
+    $_SESSION['login'] = 'false';
+    // return false;
   }
   
 }
 
-echo(existsUserFunc("kadabra"));
+// echo(existsUserFunc("kadabra"));

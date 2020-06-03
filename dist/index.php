@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,16 +15,16 @@
     <?php
       
       require_once "php/getUsersList.php";
-      // require_once "php/existsUser.php";
+      require_once "php/existsUser.php";
       require_once "php/сheckPassword.php";
       
-      // echo(getUsersListFunc());
+      echo(getUsersListFunc());
       echo("<br>");
       echo("<br>");
-      // echo(existsUserFunc("Abrakadabra"));
+      echo(existsUserFunc("Mixamar"));
       echo("<br>");
       echo("<br>");
-      echo(сheckPasswordFunc($login));
+      echo(сheckPasswordFunc());
       
       
     ?>

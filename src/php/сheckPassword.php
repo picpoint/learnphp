@@ -1,10 +1,22 @@
 <?php
+// session_start();
 
-$login = require_once "existsUser.php";
 
 
-function сheckPasswordFunc($login) {
-	return $login;
+
+function сheckPasswordFunc() {
+  $login = $_SESSION['login'];
+  $passHash = $_SESSION['passHash'];
+  $passUsr = $_SESSION['passUsr'];
+  
+  foreach($passHash as $keyHash => $valueHash) {
+    echo("$keyHash - $valueHash");
+    echo("<br>");    
+
+    
+    
+  }
+  
 }
 
 

@@ -21,7 +21,7 @@
       echo(getUsersListFunc());
       echo("<br>");
       echo("<br>");
-      echo(existsUserFunc("Abrakadabr"));
+      echo(existsUserFunc("Bormaglot"));
       echo("<br>");
       echo("<br>");
       echo(сheckPasswordFunc());

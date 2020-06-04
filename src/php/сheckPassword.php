@@ -1,8 +1,4 @@
 <?php
-// session_start();
-
-
-
 
 function сheckPasswordFunc() {
   $login = $_SESSION['login'];
@@ -46,8 +42,3 @@ function сheckPasswordFunc() {
 }
 
 
-//checkPasswordFunc($login);
-
-
-
-// echo("true / false");	

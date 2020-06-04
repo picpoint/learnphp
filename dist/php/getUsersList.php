@@ -33,5 +33,6 @@ function getUsersListFunc() {
 
   $_SESSION['passHash'] = $passHash;
   $_SESSION['passUsr'] = $passUsr;
+  $_SESSION['result'] = $result;
   
 }

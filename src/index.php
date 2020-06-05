@@ -12,23 +12,21 @@
 <body>
 
   <section class="wrp">        
-    <?php
-      
-      require_once "php/getUsersList.php";
-      require_once "php/existsUser.php";
-      require_once "php/сheckPassword.php";
-      
-      echo(getUsersListFunc());
-      echo("<br>");
-      echo("<br>");
-      echo(existsUserFunc("Bormaglot"));
-      echo("<br>");
-      echo("<br>");
-      echo(сheckPasswordFunc());
-      
-      
-    ?>
-    
+    <div class="wrp__imgblock">
+      <img src="pict/cookie-monster.png" alt="cookie-monster">
+    </div>  
+
+    <div class="wrp__entryblock">
+      <div class="wrp__formsblock">
+        <div class="wrp__entry">
+          <form method="POST">
+            <input type="text" name="usrlogin" placeholder="Login">
+            <input type="password" name="usrpass" placeholder="password">
+            <button type=sumbit>Войти</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>  
 
 </body> 

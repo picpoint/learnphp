@@ -17,7 +17,36 @@
 
 
 .wrp {
- border: @border;
-//  display: flex;
- height: 100vh;
+	border: @border;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	&__imgblock {
+		border: @border;
+		display: flex;
+		align-items: center;
+		width: 40%;
+		height: 80%;						
+	}
+	&__entryblock {
+		border: @border;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40%;
+		height: 80%;						
+	}
+	&__formsblock {
+		border: @border;	
+		width: 90%;
+		height: 70%;
+	}
+	&__entry {
+		border: @border;
+		height: 40%;
+	}
+ 
+
+
 }

@@ -38,14 +38,51 @@
 		height: 80%;						
 	}
 	&__formsblock {
-		border: @border;	
+    border: @border;	
+    display: flex;
+    flex-direction: column;
 		width: 90%;
 		height: 70%;
 	}
 	&__entry {
-		border: @border;
-		height: 40%;
-	}
+    border: @border;
+    display: flex;        
+    height: 50%;
+    width: 100%;    
+  }
+  &__enteruser {
+    // border: @border;
+    display: flex;
+    flex-direction: column;    
+    justify-content: space-around;    
+    align-items: center;
+    width: 80%;    
+      input {
+        width: 80%;
+        height: 30px;
+        // margin: 15px 0;
+        padding-left: 10px;
+      }
+      button {
+        width: 130px;
+        height: 35px;
+        // margin-top: 10px;
+        background-color: @blue;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        outline: none;        
+        cursor: pointer;
+      }
+  }
+
+  &__registration {
+    border: @border;
+    display: flex;
+    height: 100px;
+    height: 50%;
+  }
+  
  
 
 

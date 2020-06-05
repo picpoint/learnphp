@@ -18,15 +18,24 @@
 
     <div class="wrp__entryblock">
       <div class="wrp__formsblock">
+        
         <div class="wrp__entry">
-          <form method="POST">
+          <form method="POST" class="wrp__enteruser">
+            <h3>Войти</h3>
             <input type="text" name="usrlogin" placeholder="Login">
             <input type="password" name="usrpass" placeholder="password">
             <button type=sumbit>Войти</button>
           </form>
         </div>
+
+        <div class="wrp__registration">
+          
+        </div>
+        
+
       </div>
     </div>
+
   </section>  
 
 </body> 

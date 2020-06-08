@@ -17,20 +17,20 @@
 
 
 .wrp {
-	border: @border;
+	// border: @border;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
 	&__imgblock {
-		border: @border;
+		// border: @border;
 		display: flex;
 		align-items: center;
 		width: 40%;
 		height: 80%;						
 	}
 	&__entryblock {
-		border: @border;
+		// border: @border;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -38,15 +38,16 @@
 		height: 80%;						
 	}
 	&__formsblock {
-    border: @border;	
+    // border: @border;	
     display: flex;
     flex-direction: column;
 		width: 90%;
 		height: 70%;
 	}
 	&__entry {
-    border: @border;
+    // border: @border;
     display: flex;        
+    justify-content: center;
     height: 50%;
     width: 100%;    
   }
@@ -57,17 +58,22 @@
     justify-content: space-around;    
     align-items: center;
     width: 80%;    
+    background-color: lightgrey;
+    border-radius: 7px;
+    margin: 5px;
+      h3 {
+        font-weight: bolder;
+        font-size: 1.2rem;
+      }
       input {
         width: 80%;
-        height: 30px;
-        // margin: 15px 0;
+        height: 30px;        
         padding-left: 10px;
       }
       button {
         width: 130px;
-        height: 35px;
-        // margin-top: 10px;
-        background-color: @blue;
+        height: 35px;        
+        background-color: @colorblue;
         color: white;
         border-radius: 5px;
         border: none;
@@ -77,10 +83,41 @@
   }
 
   &__registration {
-    border: @border;
+    // border: @border;
     display: flex;
+    justify-content: center;
     height: 100px;
     height: 50%;
+  }
+  &__registrationuser {
+    // border: @border;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: 5px;
+    background-color: gray;
+    border-radius: 7px;
+      h3 {
+        font-weight: bolder;
+        font-size: 1.2rem;
+      }
+      input {
+        width: 80%;
+        height: 30px;        
+        padding-left: 10px;
+      }
+      button {
+        width: 130px;
+        height: 35px;        
+        background-color: @colorgreen;
+        color: white;
+        border-radius: 5px;
+        border: none;
+        outline: none;        
+        cursor: pointer;
+      }
   }
   
  

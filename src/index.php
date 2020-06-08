@@ -24,12 +24,24 @@
             <h3>Войти</h3>
             <input type="text" name="usrlogin" placeholder="Login">
             <input type="password" name="usrpass" placeholder="password">
-            <button type=sumbit>Войти</button>
+            <button type=sumbit name="btnsingin">Войти</button>
           </form>
         </div>
 
         <div class="wrp__registration">
-          
+          <form method="POST" class="wrp__registrationuser">
+            <h3>Регистрация</h3>
+            <input type="text" name="usrlogreg" placeholder="login">
+            <input type="password" name="usrpassreg" placeholder="password">
+            <button type="submit" name="btnregistration">Регистрация</button>
+          </form>
+        </div>
+        
+        <div class="wrp__output">
+          <?php
+            require_once "php/registrationFunc.php";
+            regUser();
+          ?>
         </div>
         
 

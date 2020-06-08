@@ -4,3 +4,5 @@ Den: dddddd
 SAN: 55555555555
 Major: 777
 Trins: 789451321
+Barmoglot: 124578
+Gor: 56431321

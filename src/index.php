@@ -11,6 +11,10 @@
 </head>
 <body>
 
+<?php
+  require_once "php/registrationFunc.php";  
+?>
+
   <section class="wrp">        
     <div class="wrp__imgblock">
       <img src="pict/cookie-monster.png" alt="cookie-monster">
@@ -31,19 +35,12 @@
         <div class="wrp__registration">
           <form method="POST" class="wrp__registrationuser">
             <h3>Регистрация</h3>
+            <h3><?php regUser(); ?></h3>
             <input type="text" name="usrlogreg" placeholder="login">
             <input type="password" name="usrpassreg" placeholder="password">
             <button type="submit" name="btnregistration">Регистрация</button>
           </form>
         </div>
-        
-        <div class="wrp__output">
-          <?php
-            require_once "php/registrationFunc.php";
-            regUser();
-          ?>
-        </div>
-        
 
       </div>
     </div>

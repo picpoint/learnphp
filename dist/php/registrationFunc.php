@@ -3,6 +3,9 @@
 function regUser() {
   $db = __DIR__.'/../../db.txt';
   $arrlogins = [];
+  $loginisset = "Логин существует";
+  $emptyfields = "Не заполнены поля";
+  $userisreg = "Вы зарегистрированны !";
 
   if(isset($_POST['btnregistration']) && !empty($_POST['usrlogreg'])  && !empty($_POST['usrpassreg']) ) {    
     $usrlogreg = $_POST['usrlogreg'];
@@ -19,18 +22,18 @@ function regUser() {
       }      
     }
     
-    if(in_array($usrlogreg, $arrlogins)) {
-      echo("Логин существует");
+    if(in_array($usrlogreg, $arrlogins)) {      
+      echo($loginisset);
     } else {
       $fp = fopen($db, "a+");
       $logreg = $usrlogreg . ': ' . $usrpassreg . "\n";
       fwrite($fp, $logreg);    
       fclose($fp);
-      echo("Вы зарегистрированны  ");
+      echo($userisreg);
     }
 
   } else {
-    echo("Не заполнены поля");    
+    echo($emptyfields);    
   }
 
 }

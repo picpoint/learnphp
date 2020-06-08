@@ -13,6 +13,7 @@
 
 <?php
   require_once "php/registrationFunc.php";  
+  require_once "php/autorizationFunc.php";
 ?>
 
   <section class="wrp">        
@@ -40,6 +41,12 @@
             <input type="password" name="usrpassreg" placeholder="password">
             <button type="submit" name="btnregistration">Регистрация</button>
           </form>
+        </div>
+
+        <div class="wrp__out">
+          <?php
+            autorizUser();
+          ?>
         </div>
 
       </div>

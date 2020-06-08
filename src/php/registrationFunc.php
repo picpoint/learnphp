@@ -9,7 +9,7 @@ function regUser() {
 
   if(isset($_POST['btnregistration']) && !empty($_POST['usrlogreg'])  && !empty($_POST['usrpassreg']) ) {    
     $usrlogreg = $_POST['usrlogreg'];
-    $usrpassreg = $_POST['usrpassreg'];
+    $usrpassreg = password_hash($_POST['usrpassreg'], PASSWORD_DEFAULT);
 
     $file = file($db);
     

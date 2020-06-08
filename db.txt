@@ -1,8 +1,6 @@
-Mixxx: qwertt
-Goga: 111111111
-Den: dddddd
-SAN: 55555555555
-Major: 777
-Trins: 789451321
-Barmoglot: 124578
-Gor: 56431321
+Den: $2y$10$JBbVslk8SRkECIFgfSfxO.PJwdvplg3S6WNFTpAcfNcXSNgmv/OZO
+Goga: $2y$10$ub6C84FHP.ZK8k4j0.rNVOC6/ypbwKs6S4tTgZmJgz96p2ZNDyJna
+Trins: $2y$10$UQeQ/bsaJy3RsqMqF8DbpOqC0IbM2R5TLSh5sxc5vPIhO0mS0oHnO
+SAN: $2y$10$WX97Jd.YJKovl6VJdNAJfeGD7UpoJAIgl5gP.7gLMxM5QuNHgngoi
+Major: $2y$10$QUjZE9d5F2sRad8QpxBlFettgHee6EcYQmt6MXzkn5uk1D/qPUCo2
+Mixxx: $2y$10$4lgCrB4aTOVtEurFZlSAiueq0Zp881Tt17yqT13iiuXAEOcc/Kyjy

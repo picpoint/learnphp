@@ -1,22 +1,36 @@
 <?php
 
 function regUser() {
-  if(isset($_POST['btnregistration']) && !empty($_POST['usrlogreg'])  && !empty($_POST['usrpassreg']) ) {
+  $db = __DIR__.'/../../db.txt';
+  $arrlogins = [];
+
+  if(isset($_POST['btnregistration']) && !empty($_POST['usrlogreg'])  && !empty($_POST['usrpassreg']) ) {    
     $usrlogreg = $_POST['usrlogreg'];
     $usrpassreg = $_POST['usrpassreg'];
 
-    echo("$usrlogreg  -  $usrpassreg");
+    $file = file($db);
     
-    $db = __DIR__.'/../../db.txt';
-    $fp = fopen($db, "a+");
-    $logreg = $usrlogreg . ': ' . $usrpassreg;
-    fwrite($fp, $logreg);    
-    fclose($fp);
-
-    echo("<br>");
-    echo($db);
+    foreach($file as $key => $value) {      
+      $res = explode(": ", $value);      
+      foreach($res as $key => $value) {
+        if($key == 0) {          
+          array_push($arrlogins, $value);
+        }
+      }      
+    }
+    
+    if(in_array($usrlogreg, $arrlogins)) {
+      echo("Логин существует");
+    } else {
+      $fp = fopen($db, "a+");
+      $logreg = $usrlogreg . ': ' . $usrpassreg . "\n";
+      fwrite($fp, $logreg);    
+      fclose($fp);
+      echo("Вы зарегистрированны  ");
+    }
 
   } else {
-    echo("Не заполнены поля");
+    echo("Не заполнены поля");    
   }
+
 }

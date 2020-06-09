@@ -4,3 +4,4 @@ Trins: $2y$10$UQeQ/bsaJy3RsqMqF8DbpOqC0IbM2R5TLSh5sxc5vPIhO0mS0oHnO
 SAN: $2y$10$WX97Jd.YJKovl6VJdNAJfeGD7UpoJAIgl5gP.7gLMxM5QuNHgngoi
 Major: $2y$10$QUjZE9d5F2sRad8QpxBlFettgHee6EcYQmt6MXzkn5uk1D/qPUCo2
 Mixxx: $2y$10$4lgCrB4aTOVtEurFZlSAiueq0Zp881Tt17yqT13iiuXAEOcc/Kyjy
+Nor: $2y$10$UH3Pbltr0Xzw.EnkSOPDWejxT5iunsNTT1gelyzh0yQKSxJQWpW4m

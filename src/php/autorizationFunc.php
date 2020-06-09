@@ -1,7 +1,6 @@
 <?php
 
 
-
 function autorizUser() {
 	$db = __DIR__.'/../../db.txt';
 	$file = file($db);
@@ -27,22 +26,15 @@ function autorizUser() {
 
 	$mass = array_combine($massLogin, $massPass);
 
-	foreach($mass as $key => $value) {
-		//echo("$key - $value");
+	foreach($mass as $key => $value) {		
 		echo("<br>");
 		if($key !== $usrlogin) {
 			echo("Такого логина нет ...");
 			echo("<br>");
 		} elseif($key === $usrlogin && password_verify($usrpass, $value)) {
-      echo("*******************Вы авторизованны*********************");
-      echo("<br>");
-      var_dump($usrpass);
-      echo("<br>");
-      echo("value - $value");
-      echo("<br>");
-      var_dump(password_verify($usrpass, $value));
-      echo("<br>");
-      var_dump($value);
+      echo("Вы авторизованны");      
+      $_SESSION['loginname'] = $usrlogin;
+      header('location: profile.php');
 		} else {
 			echo("Неправильный логин или пароль");
 			echo("<br>");

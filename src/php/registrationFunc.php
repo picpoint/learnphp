@@ -1,10 +1,11 @@
 <?php
 
+
 function regUser() {
   $db = __DIR__.'/../../db.txt';
   $arrlogins = [];
-  $loginisset = "Логин существует";
-  $emptyfields = "Не заполнены поля";
+  $loginisset = "Такой логин уже существует";
+  $emptyfields = "Поля не заполнены ... ";
   $userisreg = "Вы зарегистрированны !";
 
   if(isset($_POST['btnregistration']) && !empty($_POST['usrlogreg'])  && !empty($_POST['usrpassreg']) ) {    

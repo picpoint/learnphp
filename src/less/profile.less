@@ -1,0 +1,38 @@
+@import "smart-grid.less";
+@import "var.less";
+
+
+.prf {
+  border: @border;  
+  display: flex;
+  height: 100vh;      
+    &__header {    
+      border: @border;
+      display: flex;      
+      height: 7%;
+      width: 100%;        
+    }
+    &__menu {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      width: 90%;
+        h3 {
+          align-self: center;          
+        }
+    }
+  
+    &__profilename {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 10%;
+      height: 100%;
+        span {
+          text-align: center;
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+    }
+}

@@ -2,6 +2,14 @@
   session_start();
   setcookie('loginname', $_SESSION['loginname'], time() + 86400);
 ?>
+
+<?php
+  require_once "php/autorizationFunc.php";
+  require_once "php/exitFunc.php";
+  require_once "php/notAutorizeFunc.php";
+  notAutorize();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +19,7 @@
 	<title>Document</title>
 </head>
 <body>
+  <?php ?>
 	<section class="prf">
 		
 		<div class="prf__header">
@@ -21,9 +30,7 @@
 			
 			<div class="prf__profilename">
 				<span>					
-					<?php 
-            require_once "php/autorizationFunc.php";
-            require_once "php/exitFunc.php";
+					<?php             
 						echo($_SESSION['loginname']);
 					?>
 				</span>
@@ -31,7 +38,7 @@
 
       <div class="prf__exit">
         <span>
-          <a href="/">Exit</a>
+          <a href="index.php" <?php  notAutorize(); ?> >Exit</a>
         </span>
       </div>
 			

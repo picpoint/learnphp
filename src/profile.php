@@ -1,5 +1,6 @@
 <?php
   session_start();
+  setcookie('loginname', $_SESSION['loginname'], time() + 86400);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,11 +22,18 @@
 			<div class="prf__profilename">
 				<span>					
 					<?php 
-						require_once "php/autorizationFunc.php";
+            require_once "php/autorizationFunc.php";
+            require_once "php/exitFunc.php";
 						echo($_SESSION['loginname']);
 					?>
 				</span>
 			</div>
+
+      <div class="prf__exit">
+        <span>
+          <a href="/">Exit</a>
+        </span>
+      </div>
 			
 		</div>
 

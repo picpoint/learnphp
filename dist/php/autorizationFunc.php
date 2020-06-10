@@ -39,8 +39,6 @@ function autorizUser() {
 			echo("Неправильный логин или пароль");
 			echo("<br>");
 		}
-	}
-	
-
-
+  }
+  	
 }

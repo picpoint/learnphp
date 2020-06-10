@@ -1,13 +1,9 @@
 <?php
-  session_start();
-  // setcookie('loginname', $_SESSION['loginname'], time() + 86400);
+  session_start();  
 ?>
 
 <?php
-  require_once "php/autorizationFunc.php";  
-  require_once "php/notAutorizeFunc.php";  
-  require_once "php/outFunc.php";
-  
+  require_once "php/autorizationFunc.php";    
 ?>
 
 <!DOCTYPE html>

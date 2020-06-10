@@ -4,6 +4,7 @@
 
 <?php
   require_once "php/autorizationFunc.php";    
+  require_once "php/outUserFunc.php";
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +35,7 @@
 
       <div class="prf__exit">
         <span>
-          <a href="index.php" <?php   ?> >Exit</a>
+          <a href="php/outUserFunc.php">Exit</a>
         </span>
       </div>
 			

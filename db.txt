@@ -9,3 +9,5 @@ DFF: $2y$10$12XAirNJzMSC/kLUagaC8u99nX361eZJeb4t.V6KNhAizeA/tn4U6
 SADS: $2y$10$xeadr8Db6RyHXARxBG5sSOddinO6G02yoIIw0LVKS7Ncai3A9Iqgy
 QAZ: $2y$10$fYFr4MJzGV0GFhRok9WEt.99uCUY8.7vKNSn/NxNpCDC1mnsZ1Uqy
 Barmoglot: $2y$10$UigvDLXJsCO1WfWVfKiCcOI8/JjlpXjr/uD6cqrInXlKyCl/nFXKi
+Semen: $2y$10$qkl3ZKwfBZnSvNPbW1puwewhlOnADTUl.cxRlKez59TRBL/pi4hTe
+Vasya: $2y$10$r9JCcAq5Jyxm9t4YCRcRYObsneWc3k0R1v0piJ3mLNTOJqeplZHe2

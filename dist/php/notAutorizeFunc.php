@@ -1,11 +1,8 @@
 <?php
 
-session_destroy();
-setcookie('logname', $_SESSION['loginname'], time() - 86400);
-
 
 function notAutorize() {
-	if(empty($_SESSION['loginname'])) {		
-		header('location: index.php');
-	}	
+	// session_destroy();
+	setcookie('', '', time() - 86400);
+	header('location: index.php');
 }

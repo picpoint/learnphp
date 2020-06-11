@@ -10,9 +10,7 @@
 ?>
 
 <?php
-
-saveAutoriz();
-
+  saveAutoriz();
 ?>
 
 <!DOCTYPE html>

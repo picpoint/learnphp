@@ -1,6 +1,7 @@
 <?php
 
 
+
 function autorizUser() {
 	$db = __DIR__.'/../../db.txt';
 	$file = file($db);

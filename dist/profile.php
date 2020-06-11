@@ -1,11 +1,18 @@
 <?php
   session_start();  
-  setcookie($_SESSION['loginname'], $_SESSION['pass'], time() + 86400);  
+  setcookie($_SESSION['loginname'], $_SESSION["pass"], time() + 86400);     
 ?>
 
 <?php
   require_once "php/autorizationFunc.php";    
-  require_once "php/outUserFunc.php";
+  require_once "php/exitUserFunc.php";
+  require_once "php/saveAutorizeFunc.php";
+?>
+
+<?php
+
+saveAutoriz();
+
 ?>
 
 <!DOCTYPE html>
@@ -36,9 +43,10 @@
 
       <div class="prf__exit">
         <span>
-          <form method="POST">
-            <a href="" name="outUser" <?php outUser(); ?> >Exit</a>
+          <form method="POST">            
+            <button type="submit" name="btnExit">EXIT</button>
           </form>
+          <?php exitUser(); ?>
         </span>
       </div>
 			

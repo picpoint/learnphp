@@ -33,8 +33,8 @@ function autorizUser() {
 			echo("<br>");
 		} elseif($key === $usrlogin && password_verify($usrpass, $value)) {
       echo("Вы авторизованны");      
-      $_SESSION['loginname'] = $usrlogin;
-      setcookie('loginname', $_SESSION['loginname'], time() + 86400);
+      $_SESSION['loginname'] = $usrlogin;      
+      $_SESSION['pass'] = $value;
       header('location: profile.php');
 		} else {
 			echo("Неправильный логин или пароль");

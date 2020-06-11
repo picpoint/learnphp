@@ -1,5 +1,6 @@
 <?php
   session_start();  
+  setcookie($_SESSION['loginname'], $_SESSION['pass'], time() + 86400);  
 ?>
 
 <?php
@@ -35,7 +36,7 @@
 
       <div class="prf__exit">
         <span>
-          <a href="php/outUserFunc.php">Exit</a>
+          <a href="index.php">Exit</a>
         </span>
       </div>
 			

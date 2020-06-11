@@ -36,7 +36,9 @@
 
       <div class="prf__exit">
         <span>
-          <a href="index.php">Exit</a>
+          <form method="POST">
+            <a href="" name="outUser" <?php outUser(); ?> >Exit</a>
+          </form>
         </span>
       </div>
 			

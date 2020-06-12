@@ -5,6 +5,7 @@
 .prf {
   border: @border;  
   display: flex;
+  flex-direction: column;
   height: 100vh;      
     &__header {    
       border: @border;
@@ -42,5 +43,35 @@
       justify-content: center;
       align-items: center;
       width: 10%;
+    }
+
+    &__uploadblock {
+      border: @border;      
+      display: flex;
+      justify-content: center;
+      height: 7%;
+      margin-top: 50px;
+      padding: 7px;
+    }
+
+    &__uploadform {
+      border: @border;
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+    }
+
+    &__galeryblock {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      height: 86%;
+      margin-top: 50px;
+        img {
+          height: 200px;
+          width: 200px;
+          margin: 10px;
+        }
     }
 }

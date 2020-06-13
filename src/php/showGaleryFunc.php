@@ -7,22 +7,18 @@ function showGalery() {
   $folder = __DIR__."/../pict/$userlogin";
 
   if(file_exists($folder)) {
-    echo("<br>");
-    var_dump(scandir($folder));
-
     $folderContent = scandir($folder);
 
-    foreach($folderContent as $key => $value) {
-      echo("<br>");
-      echo("$key - $value");      
-      echo("<br>");
-      echo(' <img src=" ' . $value . ' "> ');            
+    foreach($folderContent as $key => $value) {      
+      if($value == '.' || $value == '..') {
+        continue;
+      } else {
+        echo('<img src="pict/' . $userlogin . '/' .  $value . '">');
+      }      
     }
 
   } else {
     echo("Galery dont have image ... :-( ");
   }
- 
-
 
 }

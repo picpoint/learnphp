@@ -63,6 +63,8 @@
       <?php 
         showGalery();
       ?>
+
+      
     </div>
 
 	</section>

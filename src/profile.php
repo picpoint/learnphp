@@ -67,11 +67,25 @@
     </div>
 
     <div class="prf__guestbook">
+      
+      <div class="prf__block">
+        <div class="prf__logo">
+          <span></span>
+        </div>  
+        <div class="prf__message">
+          <span></span>
+        </div>      
+      </div>
+
+      
       <?php
         $pathGuestBook = __DIR__.'/../guestBook.txt';
         $out = new GuestBook($pathGuestBook);
-
+        // var_dump($out);
+        echo("<br>");
+        var_dump($out->getData());
       ?>
+
     </div>
 
 	</section>

@@ -8,9 +8,9 @@
   flex-direction: column;
   height: 100vh;      
     &__header {    
-      // border: @border;
+      border: @border;
       display: flex;      
-      height: 7%;
+      height: 50px;
       width: 100%;        
       background-color: lightcyan;
     }
@@ -47,26 +47,25 @@
     }
 
     &__uploadblock {
-      // border: @border;      
+      border: @border;      
       display: flex;
       justify-content: center;
-      height: 7%;
-      margin-top: 50px;
+      height: 50px;
+      margin-top: 10px;
       padding: 7px;
     }
 
     &__uploadform {
-      // border: @border;
+      border: @border;
       display: flex;
       align-items: center;
       height: 100%;
     }
 
     &__galeryblock {
-      // border: @border;
+      border: @border;
       display: flex;
-      justify-content: center;
-      height: 86%;
+      justify-content: center;      
       margin-top: 50px;
         img {
           height: 200px;
@@ -74,4 +73,26 @@
           margin: 10px;
         }
     }
+
+    &__guestbook {
+      border: @border;
+      display: flex;
+      justify-content: center;
+    }
+    &__block {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      height: 80px;
+    }
+    &__logo {
+      border: @border;
+      width: 15%;
+    }
+    &__message {
+      border: @border;
+      width: 85%;
+    }
+
 }

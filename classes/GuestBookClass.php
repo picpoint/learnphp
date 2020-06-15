@@ -3,9 +3,45 @@
 
 
 class GuestBook {
+  protected $pathGuestBook;
   
-	public function __construct($pathGuestBook) {
-    $this -> pathGuestBook = $pathGuestBook;
-    var_dump($this -> pathGuestBook);
-	}
+  
+  public function __construct($pathGuestBook) {
+    $this -> pathGuestBook = $pathGuestBook;        
+    return $this -> pathGuestBook;
+  }
+  
+  
+  public function getData() {
+    $log = [];
+    $msg = [];
+    $mass = [];
+    $file = $this -> pathGuestBook;
+    $data = file($file);        
+
+    foreach($data as $key => $value) {
+      echo("<br>");      
+      $str = explode(": ", $value);      
+
+      foreach($str as $key => $value) {        
+        if($key == 0) {
+          array_push($log, $value);
+        } elseif($key == 1) {
+          array_push($msg, $value);
+        }
+      }
+    }
+
+    $mass = array_combine($log, $msg);
+    
+    return $mass;
+  }
+
+
+  
+
+
+
+
+
 }

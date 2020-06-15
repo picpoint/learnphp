@@ -9,6 +9,7 @@
   require_once "php/saveAutorizeFunc.php";
   require_once "php/uploadImgFunc.php";
   require_once "php/showGaleryFunc.php";
+  require_once "../classes/GuestBookClass.php";
 ?>
 
 <?php
@@ -62,9 +63,15 @@
       
       <?php 
         showGalery();
-      ?>
+      ?>      
+    </div>
 
-      
+    <div class="prf__guestbook">
+      <?php
+        $pathGuestBook = __DIR__.'/../guestBook.txt';
+        $out = new GuestBook($pathGuestBook);
+
+      ?>
     </div>
 
 	</section>

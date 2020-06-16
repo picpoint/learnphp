@@ -10,6 +10,7 @@
   require_once "php/uploadImgFunc.php";
   require_once "php/showGaleryFunc.php";
   require_once "../classes/GuestBookClass.php";
+  $pathGuestBook = __DIR__.'/../guestBook.txt';
 ?>
 
 <?php
@@ -59,9 +60,6 @@
     <div class="prf__galeryblock">
       <?php 
         uploadImg();         
-      ?>
-      
-      <?php 
         showGalery();
       ?>      
     </div>
@@ -69,22 +67,11 @@
     <div class="prf__guestbook">
       
       <div class="prf__block">
-        <div class="prf__logo">
-          <span></span>
-        </div>  
-        <div class="prf__message">
-          <span></span>
-        </div>      
-      </div>
-
-      
-      <?php
-        $pathGuestBook = __DIR__.'/../guestBook.txt';
-        $out = new GuestBook($pathGuestBook);
-        // var_dump($out);
-        echo("<br>");
-        var_dump($out->getData());
-      ?>
+        <?php
+          $out = new GuestBook($pathGuestBook);
+          $out->getData();
+        ?>
+      </div>     
 
     </div>
 

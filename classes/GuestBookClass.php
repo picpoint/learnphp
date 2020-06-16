@@ -32,13 +32,16 @@ class GuestBook {
       }
     }
 
-    $mass = array_combine($log, $msg);
-    
-    return $mass;
+    $mass = array_combine($log, $msg);        
+    // return $mass;
+
+    foreach($mass as $key => $value) {      
+      echo("<div class="."prf__logo"."> $key </div>  ");            
+      echo("<div class="."prf__message"."> $value </div>  ");      
+    }
   }
 
-
-  
+ 
 
 
 

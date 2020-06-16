@@ -11,6 +11,7 @@
   require_once "php/showGaleryFunc.php";
   require_once "../classes/GuestBookClass.php";
   $pathGuestBook = __DIR__.'/../guestBook.txt';
+  $out = new GuestBook($pathGuestBook);
 ?>
 
 <?php
@@ -65,20 +66,28 @@
     </div>
 
     <div class="prf__guestbook">
-      <div class="prf__sendmgs">
-        <div class="prf__usr">
-          <?php 
-            echo($_SESSION['loginname']);
-          ?>
+
+      <form method="POST" class="prf__sendform">      
+        <div class="prf__sendmgs">
+          <div class="prf__usr">
+            <?php 
+              echo($_SESSION['loginname']);
+            ?>
+          </div>
+          <div class="prf__writemsg">
+            <input type="text" name="writemsg">
+          </div>
+          <div class="prf__sendblock">
+            <button type="submit" name="btnsend">Отправить</button>
+          </div>
         </div>
-        <div class="prf__writemsg">
-          <input type="text" name="writemsg">
-        </div>
-      </div>
+      </form>
+      
       <?php
-        $out = new GuestBook($pathGuestBook);
-        $out->getData();
+        $out -> getData();
+        $out -> append();        
       ?>
+
     </div>
 
 	</section>

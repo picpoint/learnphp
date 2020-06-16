@@ -18,8 +18,7 @@ class GuestBook {
     $file = $this -> pathGuestBook;
     $data = file($file);        
 
-    foreach($data as $key => $value) {
-      echo("<br>");      
+    foreach($data as $key => $value) {      
       $str = explode(": ", $value);      
 
       foreach($str as $key => $value) {        
@@ -32,6 +31,7 @@ class GuestBook {
     }
 
     $mass = array_combine($log, $msg);
+    var_dump($mass);
 
     foreach($mass as $key => $value) {      
       echo("<div class="."prf__block".">");
@@ -43,13 +43,21 @@ class GuestBook {
 
 
 
-  public function append($text) {
+  public function append() {
+    if(isset($_POST["btnsend"]) && !empty($_POST["writemsg"])) {
+      $usr = $_SESSION["loginname"];
+      $msg = $_POST["writemsg"];
+      echo("$usr - $msg");      
+
+      $file = $this -> pathGuestBook;      
+      $usrmsg = $_SESSION["loginname"] . ": " . $msg . "\r\n";
+
+      $data = fopen($file, "a+");
+      fwrite($data, $usrmsg);
+      fclose($data);      
+    }
 
   }
-
- 
-
-
 
 
 

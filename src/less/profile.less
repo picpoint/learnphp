@@ -8,7 +8,7 @@
   flex-direction: column;
   height: 100vh;      
     &__header {    
-      border: @border;
+      // border: @border;
       display: flex;      
       height: 50px;
       width: 100%;        
@@ -47,7 +47,7 @@
     }
 
     &__uploadblock {
-      border: @border;      
+      // border: @border;      
       display: flex;
       justify-content: center;
       height: 50px;
@@ -56,14 +56,14 @@
     }
 
     &__uploadform {
-      border: @border;
+      // border: @border;
       display: flex;
       align-items: center;
       height: 100%;
     }
 
     &__galeryblock {
-      border: @border;
+      // border: @border;
       display: flex;
       justify-content: center;      
       margin-top: 50px;
@@ -77,22 +77,65 @@
     &__guestbook {
       border: @border;
       display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__sendmgs {
+      border: @border;
+      display: flex;
+      width: 60%;
+      height: 50px;
+    }
+    &__usr {
+      border: @border;
+      display: flex;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
+      width: 15%;
+      height: 100%;      
+      color: @darkgray;
+      font-weight: bolder;
+      font-size: 1.3rem;
+    }
+    &__writemsg {
+      border: @border;
+      display: flex;      
+      align-items: center;
+      width: 85%;
+      height: 70%;
+      border-radius: 7px;
+      padding-left: 10px;
     }
     &__block {
       border: @border;
-      display: flex;
+      display: flex;      
       justify-content: center;
-      width: 50%;
-      height: 80px;
+      width: 60%;
+      height: 80px;      
     }
     &__logo {
-      border: @border;      
+      // border: @border;      
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 15%;
+      font-weight: bold;
+      background-color: lightgrey;
+      border-radius: 7px;
+      margin: 5px;
+      text-align: center;
     }
     &__message {
-      border: @border;
+      // border: @border;
+      display: flex;
+      align-items: center;
       width: 85%;
+      background-color: lightgrey;
+      border-radius: 7px;
+      margin: 5px;
+      padding-left: 7px;
+      text-align: center;
     }
 
 }

@@ -65,14 +65,20 @@
     </div>
 
     <div class="prf__guestbook">
-      
-      <div class="prf__block">
-        <?php
-          $out = new GuestBook($pathGuestBook);
-          $out->getData();
-        ?>
-      </div>     
-
+      <div class="prf__sendmgs">
+        <div class="prf__usr">
+          <?php 
+            echo($_SESSION['loginname']);
+          ?>
+        </div>
+        <div class="prf__writemsg">
+          <input type="text" name="writemsg">
+        </div>
+      </div>
+      <?php
+        $out = new GuestBook($pathGuestBook);
+        $out->getData();
+      ?>
     </div>
 
 	</section>

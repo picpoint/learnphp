@@ -4,11 +4,10 @@
 
 class GuestBook {
   protected $pathGuestBook;
-  
-  
+    
   public function __construct($pathGuestBook) {
     $this -> pathGuestBook = $pathGuestBook;        
-    return $this -> pathGuestBook;
+    
   }
   
   
@@ -32,13 +31,20 @@ class GuestBook {
       }
     }
 
-    $mass = array_combine($log, $msg);        
-    // return $mass;
+    $mass = array_combine($log, $msg);
 
     foreach($mass as $key => $value) {      
+      echo("<div class="."prf__block".">");
       echo("<div class="."prf__logo"."> $key </div>  ");            
       echo("<div class="."prf__message"."> $value </div>  ");      
+      echo("</div>");
     }
+  }
+
+
+
+  public function append($text) {
+
   }
 
  

@@ -10,9 +10,11 @@
   // require_once "php/uploadImgFunc.php";
   require_once "php/showGaleryFunc.php";
   require_once "../classes/GuestBookClass.php";
-  require_once "../classes/";
+  require_once "../classes/UploaderClass.php";
   $pathGuestBook = __DIR__.'/../guestBook.txt';
-  $out = new GuestBook($pathGuestBook);
+  $gb = new GuestBook($pathGuestBook);
+  $upld = new Uploader("uploadFile", "upload");
+  
 ?>
 
 <?php
@@ -61,7 +63,9 @@
 
     <div class="prf__galeryblock">
       <?php 
-        uploadImg();         
+        // uploadImg();
+        $upld = new Uploader("uploadFile", "upload");          
+        $upld -> isUploaded(); 
         showGalery();
       ?>      
     </div>
@@ -84,11 +88,11 @@
         </div>
       </form>
       
-      <?php $out -> append(); ?>
+      <?php $gb -> append(); ?>
 
       <div class="prf__blockcomm">        
-        <?php $out -> getData(); ?>        
-      </div>
+        <?php $gb -> getData(); ?>        
+      </div>      
 
     </div>
 

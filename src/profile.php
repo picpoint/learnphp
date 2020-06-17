@@ -83,10 +83,11 @@
         </div>
       </form>
       
-      <?php
-        $out -> getData();
-        $out -> append();        
-      ?>
+      <?php $out -> append(); ?>
+
+      <div class="prf__block">
+        <?php $out -> getData(); ?>
+      </div>
 
     </div>
 

@@ -7,9 +7,10 @@
   require_once "php/autorizationFunc.php";    
   require_once "php/exitUserFunc.php";
   require_once "php/saveAutorizeFunc.php";
-  require_once "php/uploadImgFunc.php";
+  // require_once "php/uploadImgFunc.php";
   require_once "php/showGaleryFunc.php";
   require_once "../classes/GuestBookClass.php";
+  require_once "../classes/";
   $pathGuestBook = __DIR__.'/../guestBook.txt';
   $out = new GuestBook($pathGuestBook);
 ?>
@@ -85,8 +86,8 @@
       
       <?php $out -> append(); ?>
 
-      <div class="prf__block">
-        <?php $out -> getData(); ?>
+      <div class="prf__blockcomm">        
+        <?php $out -> getData(); ?>        
       </div>
 
     </div>

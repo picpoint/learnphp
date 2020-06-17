@@ -6,11 +6,10 @@ class GuestBook {
   protected $pathGuestBook;
     
   public function __construct($pathGuestBook) {
-    $this -> pathGuestBook = $pathGuestBook;        
-    
-  }
+    $this -> pathGuestBook = $pathGuestBook;            
+  }  
   
-  
+
   public function getData() {
     $log = [];
     $msg = [];
@@ -29,9 +28,7 @@ class GuestBook {
         }
       }
     }
-
   }
-
 
 
   public function append() {
@@ -48,7 +45,5 @@ class GuestBook {
     }
 
   }
-
-
-
+  
 }

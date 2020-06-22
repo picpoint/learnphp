@@ -6,6 +6,18 @@
   <title>Document</title>
 </head>
 <body>
-  
+
+  <div class="tmp__block">
+    <span>Запись 1</span>
+  </div>
+
+  <div class="tmp__block">
+    <span>Запись 2</span>
+  </div>
+
+  <div class="tmp__block">
+    <span>Запись 3</span>
+  </div>
+
 </body>
 </html>

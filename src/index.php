@@ -13,15 +13,18 @@
 
 <?php
   require_once "../models/datasDBClass.php";
+  
 
 ?>
   <section class="wrp">        
         
     <?php
-      $path = __DIR__.'/../db.txt';
-      $dt = new DatasDB($path);
+      // $path = __DIR__.'/../db.txt';
+      // $dt = new DatasDB($path);
+      // var_dump($dt->readDatas());
 
-      var_dump($dt->readDatas());
+      
+
     ?>
 
   </section>  

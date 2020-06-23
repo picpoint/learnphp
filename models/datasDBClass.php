@@ -12,9 +12,7 @@ class DatasDB {
 
 
   public function readDatas() {
-    $fl = file($this->path);
-    
-    return $fl;
+    return file($this->path);
   }
 
 

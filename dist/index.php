@@ -11,8 +11,19 @@
 </head>
 <body>
 
+<?php
+  require_once "../models/datasDBClass.php";
+
+?>
   <section class="wrp">        
-    <span>Hello</span>
+        
+    <?php
+      $path = __DIR__.'/../db.txt';
+      $dt = new DatasDB($path);
+
+      var_dump($dt->readDatas());
+    ?>
+
   </section>  
 
 </body> 

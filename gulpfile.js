@@ -112,8 +112,8 @@ gulp.task('grid', function () {
 gulp.task('browserSync', function () {
 		browserSync.init({
 			server: {
-          baseDir: settings.dist
-          // proxy: '127.0.0.1://www/tsk/dist/'
+          // baseDir: settings.dist
+          proxy: 'http://localhost/learnphp/dist/'          
 			}
 		});
 });

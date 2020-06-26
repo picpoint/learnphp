@@ -11,6 +11,7 @@
   require_once "php/showGaleryFunc.php";
   require_once "../classes/GuestBookClass.php";
   require_once "../classes/UploaderClass.php";
+  require_once "../models/readDBClass.php";
   $pathGuestBook = __DIR__.'/../guestBook.txt';
   $gb = new GuestBook($pathGuestBook);
   $upld = new Uploader("uploadFile", "upload");
@@ -89,6 +90,10 @@
       </form>
       
       <?php $gb -> append(); ?>
+      <?php
+        $connDB = new ReadDB();        
+        $connDB -> testQuery();
+      ?>
 
       <div class="prf__blockcomm">        
         <?php $gb -> getData(); ?>        

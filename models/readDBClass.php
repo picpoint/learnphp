@@ -7,7 +7,10 @@ class ReadDB {
   
   
   public function __construct() {
-    $path = __DIR__.'/../config.txt';    
+    $path = __DIR__.'/../config.txt';            
+    var_dump(file($path));
   }
+
+
 
 }

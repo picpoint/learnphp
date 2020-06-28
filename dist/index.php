@@ -10,11 +10,17 @@
   <link rel="stylesheet" href="css/style.css">	  
 </head>
 <body>
+  <?php
+    require_once "../models/readDBClass.php";
+  ?>
 
   <section class="wrp">        
-    <h3>Hello 8 task</h3>
-    
-    <span>test</span>
+    <div class="wrp__test">
+      <?php
+        $out = new ReadDB();
+        var_dump($out);
+      ?>
+    </div>
   </section>  
 
 </body> 

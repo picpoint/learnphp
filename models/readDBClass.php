@@ -2,11 +2,12 @@
 
 
 
-class readDB {
+class ReadDB {
   protected $config;
   
   
-  public function __construct($config) {
-    $this->config = $config;
+  public function __construct() {
+    $path = __DIR__.'/../config.txt';    
   }
+
 }

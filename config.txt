@@ -1,5 +1,5 @@
-hostname = localhost
-username = rmtar
-password = 2203
-dbname = task8
-tablename = template
+localhost
+rmtar
+2203
+task8
+template

@@ -18,7 +18,7 @@
     <div class="wrp__test">
       <?php
         $out = new ReadDB();
-        
+        $out -> executeMet();
       ?>
     </div>
   </section>  

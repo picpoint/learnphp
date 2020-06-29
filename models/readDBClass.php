@@ -8,32 +8,40 @@ class ReadDB {
   protected $passdb;
   protected $db;
   protected $table; 
-  public $dbh;
+  protected $dbh;
     
   
   public function __construct() {
-    $path = __DIR__.'/../config.txt';            
-    $conf = file($path);
-    $host = trim($conf[0]);
-    $usernamedb = trim($conf[1]);
-    $passdb = trim($conf[2]);
-    $db = trim($conf[3]);
-    $table = trim($conf[4]);
-    
-    $dbh = new PDO('mysql:host='.$host.';dbname='.$db.'', $usernamedb, $passdb);
-    var_dump($dbh);    
-        
-    
+    $this->path = __DIR__.'/../config.txt';            
+    $conf = file($this->path);
+    $this->host = trim($conf[0]);
+    $this->usernamedb = trim($conf[1]);
+    $this->passdb = trim($conf[2]);
+    $this->db = trim($conf[3]);
+    $this->table = trim($conf[4]);    
+    $this->dbh = new PDO('mysql:host='.$this->host.';dbname='.$this->db.'', $this->usernamedb, $this->passdb);    
   }
 
 
-  public function executeMeth(string $sql) {
-    $sth = $dbh -> prepare($sql);
+  
+  public function executeMeth(string $sql) {    
+    $sth = $this->dbh -> prepare($sql);
     $sth -> execute();
     $data = $sth -> fetchAll();
-    var_dump($data);
+    // var_dump($data);
+    
+    if(!empty($data)) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
+
+
+  public function queryMeth(string $sql, array $data) {
+
+  }
 
   
 

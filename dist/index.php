@@ -18,7 +18,7 @@
     <div class="wrp__test">
       <?php
         $out = new ReadDB();
-        $out -> executeMeth('SELECT * FROM template');
+        echo($out -> executeMeth('SELECT * FROM template'));
       ?>
     </div>
   </section>  

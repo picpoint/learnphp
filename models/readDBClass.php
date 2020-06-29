@@ -27,8 +27,8 @@ class ReadDB {
   public function executeMeth(string $sql) {    
     $sth = $this->dbh -> prepare($sql);
     $sth -> execute();
-    $data = $sth -> fetchAll();
-    // var_dump($data);
+    $data = $sth -> fetchAll();    
+    var_dump($data);
     
     if(!empty($data)) {
       return true;
@@ -40,7 +40,8 @@ class ReadDB {
 
 
   public function queryMeth(string $sql, array $data) {
-
+    $sth = $this->dbh -> prepare($sql);
+    $sth -> execute($data);
   }
 
   

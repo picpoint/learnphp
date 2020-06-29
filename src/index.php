@@ -18,7 +18,10 @@
     <div class="wrp__test">
       <?php
         $out = new ReadDB();
-        echo($out -> executeMeth('SELECT * FROM template'));
+        $out -> executeMeth('SELECT * FROM template');
+
+        $arr = ['Александр', 'Сергеевич', 83,  'мужской'];
+        $out -> queryMeth("INSERT INTO templare (firstname, lastname, age, gender) VALUES(?, ?, ?, ?)", $arr);
       ?>
     </div>
   </section>  

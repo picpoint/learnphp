@@ -27,8 +27,16 @@ class ReadDB {
   public function executeMeth(string $sql) {    
     $sth = $this->dbh -> prepare($sql);
     $sth -> execute();
-    $data = $sth -> fetchAll();    
-    var_dump($data);
+    $data = $sth -> fetchAll(PDO::FETCH_ASSOC);    
+    
+    // foreach($data as $mass) {      
+    //   foreach($mass as $key => $value) {
+    //     echo("$key - $value");
+    //     echo("<br>");
+    //   }
+    //   echo("<br>");
+    //   echo("<br>");
+    // }
     
     if(!empty($data)) {
       return true;

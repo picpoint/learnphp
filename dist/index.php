@@ -20,8 +20,8 @@
         $out = new ReadDB();
         $out -> executeMeth('SELECT * FROM template');
 
-        $arr = ['Александр', 'Сергеевич', 83,  'мужской'];
-        $out -> queryMeth("INSERT INTO templare (firstname, lastname, age, gender) VALUES(?, ?, ?, ?)", $arr);
+        $arr = ['Аркадий', 'Аркадьевич', 100,  'мужской'];
+        $out -> queryMeth("INSERT INTO template (firstname, lastname, age, gender) VALUES(?, ?, ?, ?)", $arr);
       ?>
     </div>
   </section>  

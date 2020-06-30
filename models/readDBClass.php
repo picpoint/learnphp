@@ -1,5 +1,6 @@
 <?php
 
+require_once "../controllers/readFieldsArr.php";
 
 
 class ReadDB {
@@ -49,8 +50,14 @@ class ReadDB {
 
   public function queryMeth(string $sql, array $data) {
     $sth = $this->dbh -> prepare($sql);
-    $sth -> execute($data);
-    var_dump($data);
+    
+    if($sth -> execute($data)) {      
+      return $data;
+    } else {
+      return false;
+    }
+    
+    // var_dump($data);
 
   }
 

@@ -14,6 +14,7 @@
 
   <?php
     require_once "../models/readDBClass.php";
+    require_once "../controllers/readFieldsArr.php";
   ?>
 
   <section class="wrp">        
@@ -23,21 +24,24 @@
         <br>
         <input type="text" name="lastname" placeholder="Фамилия">
         <br>
-        <input type="text" name="age" placeholder="Возраст">
+        <input type="number" name="age" placeholder="Возраст">
         <br>
         <input type="text" name="gender" placeholder="пол">
         <br>
-        <button type="submit">Отправить</button>
+        <button type="submit" name="sendbtn">Отправить</button>
       </form>
     </div>
     <div class="wrp__test">
       <?php
         $out = new ReadDB();
-        $out -> executeMeth('SELECT * FROM template');
+        $mkarr = new ReadFields();
 
-        $arr = ['Аркадий', 'Аркадьевич', 100,  'мужской'];
-        $out -> queryMeth("INSERT INTO template (firstname, lastname, age, gender) VALUES(?, ?, ?, ?)", $arr);
-        $echo -> queryMeth();
+        var_dump($mkarr -> makeArr());
+
+        $out -> executeMeth('SELECT * FROM template');
+        // $arr = ['Аркадий', 'Аркадьевич', 100,  'мужской'];
+        var_dump($out -> queryMeth("INSERT INTO template (firstname, lastname, age, gender) VALUES(?, ?, ?, ?)", $mkarr -> makeArr() ));
+        
       ?>
     </div>
   </section>  

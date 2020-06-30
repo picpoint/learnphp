@@ -50,6 +50,8 @@ class ReadDB {
   public function queryMeth(string $sql, array $data) {
     $sth = $this->dbh -> prepare($sql);
     $sth -> execute($data);
+    var_dump($data);
+
   }
 
   

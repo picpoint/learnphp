@@ -20,5 +20,20 @@
 .wrp {
 	border: @border;
 	display: flex;	
-  height: 100vh;  
+	flex-direction: column;
+	height: 100vh;  
+		&__insertquery {
+			border: @border;
+			display: flex;	
+			flex-direction: column;
+		}
+		&__insertform {
+			display: flex;	
+			flex-direction: column;
+			width: 20%;
+				input {
+					margin:	5px;
+					height: 25px;
+				}
+		}
 }

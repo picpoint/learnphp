@@ -24,7 +24,7 @@
         <br>
         <input type="text" name="lastname" placeholder="Фамилия">
         <br>
-        <input type="number" name="age" placeholder="Возраст">
+        <input type="text" name="age" placeholder="Возраст">
         <br>
         <input type="text" name="gender" placeholder="пол">
         <br>
@@ -34,13 +34,11 @@
     <div class="wrp__test">
       <?php
         $out = new ReadDB();
-        $mkarr = new ReadFields();
+        $mkarr = new ReadFields();       
 
-        var_dump($mkarr -> makeArr());
-
-        $out -> executeMeth('SELECT * FROM template');
-        // $arr = ['Аркадий', 'Аркадьевич', 100,  'мужской'];
-        var_dump($out -> queryMeth("INSERT INTO template (firstname, lastname, age, gender) VALUES(?, ?, ?, ?)", $mkarr -> makeArr() ));
+        $out -> executeMeth('SELECT * FROM template');        
+        $out -> queryMeth("INSERT INTO template (firstname, lastname, age, gender) VALUES(?, ?, ?, ?)", $mkarr -> makeArr());
+        // var_dump($mkarr -> makeArr());
         
       ?>
     </div>

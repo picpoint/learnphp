@@ -12,16 +12,16 @@ class ReadFields {
 
 
 	function makeArr() {    
-    $this->firstname = $_POST['firstname'];
-    $this->lastname = $_POST['lastname'];
-    $this->age = $_POST['age'];
-    $this->gender = $_POST['gender'];
+    $this->firstname = trim($_POST['firstname']);
+    $this->lastname = trim($_POST['lastname']);
+    $this->age = trim($_POST['age']);
+    $this->gender = trim($_POST['gender']);
     
     if(isset($_POST['sendbtn']) && !empty($this->firstname) && !empty($this->lastname) && !empty($this->age) && !empty($this->gender)) {
-      $arr["$this->firstname"] = $this->firstname;
-      $arr["$this->lastname"] = $this->lastname;
-      $arr["$this->age"] = $this->age;
-      $arr["$this->gender"] = $this->gender;    
+      $arr[0] = $this->firstname;
+      $arr[1] = $this->lastname;
+      $arr[2] = $this->age;
+      $arr[3] = $this->gender;    
 
       return $arr;
     } else {

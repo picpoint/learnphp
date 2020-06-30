@@ -29,16 +29,7 @@ class ReadDB {
     $sth = $this->dbh -> prepare($sql);
     $sth -> execute();
     $data = $sth -> fetchAll(PDO::FETCH_ASSOC);    
-    
-    // foreach($data as $mass) {      
-    //   foreach($mass as $key => $value) {
-    //     echo("$key - $value");
-    //     echo("<br>");
-    //   }
-    //   echo("<br>");
-    //   echo("<br>");
-    // }
-    
+        
     if(!empty($data)) {
       return true;
     } else {
@@ -55,14 +46,9 @@ class ReadDB {
       return $data;
     } else {
       return false;
-    }
+    }    
     
-    // var_dump($data);
-
   }
-
-  
-
 
 
 }

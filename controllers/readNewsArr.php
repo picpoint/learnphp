@@ -4,14 +4,18 @@ require_once "../models/readNewsDBClass.php";
 
 
 
-class ReadNews {
+class ReadNewsController {
   public $arrNews = [];
 
 
   public function readDataNews() {
-    $arrNews = new readNewsMeth('SELECT * FROM news');
-    var_dump($arrNews);
+    $arrNews = new ReadNews();
+    $mass = $arrNews -> readNewsMeth('SELECT * FROM news');
+    var_dump($mass);
   }
+
+
+  
 
 
 

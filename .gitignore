@@ -1,2 +1,4 @@
-#ignore directory "node_moduleS"
+#ignore directories
 node_modules
+.idea
+

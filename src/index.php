@@ -15,6 +15,8 @@
   <?php
     require_once "../models/readDBClass.php";
     require_once "../controllers/readFieldsArr.php";
+    require_once "../models/readNewsDBClass.php";
+    require_once "../controllers/readNewsArr.php";
   ?>
 
   <section class="wrp">        
@@ -44,8 +46,16 @@
 
     <div class="wrp__newsblock">
       <?php
-        echo("plug");
+        // $cnct = new ReadNews();
+        // var_dump($cnct -> readNewsMeth('SELECT * FROM news'));
+
+        // $cnct = new ReadNewsController();
+        // $cnct -> readDataNews();
+        
+        require_once "../view/newsView.php";
       ?>
+
+
     </div>
 
 

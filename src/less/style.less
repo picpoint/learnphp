@@ -20,12 +20,14 @@
 .wrp {
 	border: @border;
 	display: flex;	
-	flex-direction: column;
-	height: 100vh;  
+  flex-direction: column;	
+  height: 100vh;
 		&__insertquery {
 			border: @border;
 			display: flex;	
-			flex-direction: column;
+      flex-direction: column;
+      height: 35%;
+      background-color: lightgoldenrodyellow;
 		}
 		&__insertform {
 			display: flex;	
@@ -41,5 +43,17 @@
 				button {
 					margin-bottom: 50px;
 				}
-		}
+    }
+    
+    &__test {
+      border: @border;      
+      display: flex;
+      height: 10%;
+    }
+
+    &__newsblock {
+      border: @border;
+      display: flex;
+      height: 70%;
+    }
 }

@@ -37,11 +37,19 @@
         $mkarr = new ReadFields();       
 
         $out -> executeMeth('SELECT * FROM template');        
-        $out -> queryMeth("INSERT INTO template (firstname, lastname, age, gender) VALUES(?, ?, ?, ?)", $mkarr -> makeArr());
-        // var_dump($mkarr -> makeArr());
+        $out -> queryMeth("INSERT INTO template (firstname, lastname, age, gender) VALUES(?, ?, ?, ?)", $mkarr -> makeArr());       
         
       ?>
     </div>
+
+    <div class="wrp__newsblock">
+      <?php
+        echo("plug");
+      ?>
+    </div>
+
+
+
   </section>  
 
 </body> 

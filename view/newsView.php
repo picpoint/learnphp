@@ -3,15 +3,6 @@
 ?>
 
 
-<?php 
-
-  $mass = new ReadNewsController();
-  $arr = $mass -> readDataNews();
-	var_dump($arr);
-
-?>
-
-
-	<!-- <div class="wrp__viewblock">
+	<div class="wrp__viewblock">
 			
-	</div> -->
+	</div>

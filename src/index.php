@@ -46,13 +46,16 @@
 
     <div class="wrp__newsblock">
       <?php
+        // require_once "../view/newsView.php";
+
         // $cnct = new ReadNews();
         // var_dump($cnct -> readNewsMeth('SELECT * FROM news'));
 
-        // $cnct = new ReadNewsController();
-        // $cnct -> readDataNews();
+        $cnct = new ReadNewsController();
+        $cnct -> readDataNews();
+        var_dump($cnct -> outNews());
         
-        require_once "../view/newsView.php";
+        
       ?>
 
 

@@ -47,20 +47,32 @@
     <div class="wrp__newsblock">
       <?php
         // require_once "../view/newsView.php";
-
         // $cnct = new ReadNews();
         // var_dump($cnct -> readNewsMeth('SELECT * FROM news'));
 
         $cnct = new ReadNewsController();
         $cnct -> readDataNews();
-        var_dump($cnct -> outNews());
-        
-        
+        $cnct -> outNews();
+        // var_dump($cnct -> outNews());
       ?>
 
+      <!-- template -->
+      <!-- <div class="wrp__viewblock">
+        <div class="wrp__viewhdr">
+          <span>header</span>
+        </div>
+        <div class="wrp__viewtext">
+          <span>content</span>
+        </div>
+        <div class="wrp__viewavtar">
+          <span>avtar</span>
+        </div>
+      </div> -->
+      <!-- template -->
 
     </div>
 
+    
 
 
   </section>  

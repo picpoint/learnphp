@@ -1,6 +1,7 @@
 <?php
 
 require_once "../models/readNewsDBClass.php";
+require_once "../view/newsView.php";
 
 
 
@@ -18,7 +19,17 @@ class ReadNewsController {
 
   public function outNews() {
     $ms = $this->readDataNews();
-    return $ms;
+    // return $ms;
+    // viewTmp();    
+
+    foreach($ms as $datas) {
+      // viewTmp($datas);
+      foreach($datas as $key => $value) {
+        viewTmp($key, $value);
+        // echo("$key - $value");
+        // echo("<br>");
+      }
+    }
   }
 
 

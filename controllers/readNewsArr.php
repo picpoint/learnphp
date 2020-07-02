@@ -11,7 +11,8 @@ class ReadNewsController {
   public function readDataNews() {
     $arrNews = new ReadNews();
     $mass = $arrNews -> readNewsMeth('SELECT * FROM news');
-    var_dump($mass);
+    return $mass;
+    // var_dump($mass);
   }
 
 

@@ -10,6 +10,8 @@
 	var_dump($arr);
 
 ?>
+
+
 	<!-- <div class="wrp__viewblock">
 			
 	</div> -->

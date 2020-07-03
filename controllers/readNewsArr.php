@@ -18,16 +18,11 @@ class ReadNewsController {
 
 
   public function outNews() {
-    $ms = $this->readDataNews();
-    // return $ms;
-    // viewTmp();    
+    $this->ms = $this->readDataNews();
 
-    foreach($ms as $datas) {
-      // viewTmp($datas);
+    foreach($this->ms as $datas) {    
       foreach($datas as $key => $value) {
-        viewTmp($key, $value);
-        // echo("$key - $value");
-        // echo("<br>");
+        viewTmp($key, $value);        
       }
     }
   }

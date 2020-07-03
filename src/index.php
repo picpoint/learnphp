@@ -20,6 +20,9 @@
   ?>
 
   <section class="wrp">        
+    <div class="wrp__menu">
+      <a href="article.php">Articles</a>
+    </div>
     <div class="wrp__insertquery">
       <form method="POST" class="wrp__insertform">
         <input type="text" name="firstname" placeholder="Имя">
@@ -46,30 +49,10 @@
 
     <div class="wrp__newsblock">
       <?php
-        // require_once "../view/newsView.php";
-        // $cnct = new ReadNews();
-        // var_dump($cnct -> readNewsMeth('SELECT * FROM news'));
-
         $cnct = new ReadNewsController();
         $cnct -> readDataNews();
-        $cnct -> outNews();
-        // var_dump($cnct -> outNews());
+        $cnct -> outNews();        
       ?>
-
-      <!-- template -->
-      <!-- <div class="wrp__viewblock">
-        <div class="wrp__viewhdr">
-          <span>header</span>
-        </div>
-        <div class="wrp__viewtext">
-          <span>content</span>
-        </div>
-        <div class="wrp__viewavtar">
-          <span>avtar</span>
-        </div>
-      </div> -->
-      <!-- template -->
-
     </div>
 
     

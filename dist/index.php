@@ -42,8 +42,7 @@
         $mkarr = new ReadFields();       
 
         $out -> executeMeth('SELECT * FROM template');        
-        $out -> queryMeth("INSERT INTO template (firstname, lastname, age, gender) VALUES(?, ?, ?, ?)", $mkarr -> makeArr());       
-        
+        $out -> queryMeth("INSERT INTO template (firstname, lastname, age, gender) VALUES(?, ?, ?, ?)", $mkarr -> makeArr());        
       ?>
     </div>
 

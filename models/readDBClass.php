@@ -20,7 +20,7 @@ class ReadDB {
     $this->passdb = trim($conf[2]);
     $this->db = trim($conf[3]);
     $this->table = trim($conf[4]);    
-    $this->dbh = new PDO('mysql:host='.$this->host.';dbname='.$this->db.'', $this->usernamedb, $this->passdb);    
+    $this->dbh = new PDO('mysql:host='.$this->host.';dbname='.$this->db.'', $this->usernamedb, $this->passdb);
   }
 
 
@@ -46,8 +46,7 @@ class ReadDB {
       return $data;
     } else {
       return false;
-    }    
-    
+    }        
   }
 
 

@@ -5,8 +5,8 @@ require_once "../models/readOneNewsDBClass.php";
 
 
 class ReadNewsArticle {
-
 	public $mass;
+
 	
 	public function __construct() {
 		$this->arr = new ReadOneNewsDB();
@@ -21,9 +21,7 @@ class ReadNewsArticle {
 					echo("<a href=". "?id=$value" . ">$value</a>");
 				}
 			}
-		}        
-		// return ($this->mass);
-
+		}        	
 	}
 
 
@@ -32,8 +30,7 @@ class ReadNewsArticle {
 			foreach($ms as $key => $value) {                
 				if($key == 'id') {
 					$get = new ReadOneNewsDB();
-					$news = $get -> readOneNews($key);
-					// return $news;
+					$news = $get -> readOneNews($key);					
 				}
 			}
 		}        
@@ -46,7 +43,6 @@ class ReadNewsArticle {
 				}				
 			}
 		}
-
 	}
 
 

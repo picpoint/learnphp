@@ -25,6 +25,4 @@ class ReadOneNewsDB {
 		return $data;
 	}
 
-
-
 }

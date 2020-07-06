@@ -31,9 +31,7 @@ function viewTmp($key, $value) {
   echo("        
       </div>
     </div>
-  ");
-
-  
+  ");  
 } 
 
 

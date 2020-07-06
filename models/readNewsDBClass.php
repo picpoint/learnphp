@@ -5,7 +5,7 @@
 class ReadNews {
   
   public function __construct() {
-    $this->connct = new PDO('mysql:host=localhost;dbname=task8', 'rmtar', '2203');        
+    $this->connct = new PDO('mysql:host=localhost;dbname=task8', 'rmtar', '2203');      
   }
 
 

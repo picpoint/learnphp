@@ -26,8 +26,7 @@ class ReadFields {
       return $arr;
     } else {
       return false;
-    }
-    
+    }    
   }
 
 

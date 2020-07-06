@@ -22,7 +22,7 @@ class ReadNewsArticle {
 				}
 			}
 		}        
-		return ($this->mass);
+		// return ($this->mass);
 
 	}
 
@@ -33,10 +33,19 @@ class ReadNewsArticle {
 				if($key == 'id') {
 					$get = new ReadOneNewsDB();
 					$news = $get -> readOneNews($key);
-					return $news;
+					// return $news;
 				}
 			}
 		}        
+
+		foreach($news as $nws) {
+			foreach($nws as $key => $value) {
+				if($key != 'id') {
+					echo("$value");
+					echo("<br>");
+				}				
+			}
+		}
 
 	}
 

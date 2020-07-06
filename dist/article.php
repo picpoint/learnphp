@@ -22,14 +22,14 @@
     <div class="wrp__paginator">
       <?php      
         $dt = new ReadNewsArticle();
-        var_dump($dt -> outIndx());  
-        var_dump($dt -> outNews());
+        $dt -> outIndx();  
+        // var_dump($dt -> outNews());
       ?>
     </div>  
 
     <div class="wrp__shownews">
       <?php
-
+        $dt -> outNews();
       ?>
     </div>
   </div>

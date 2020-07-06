@@ -23,6 +23,7 @@
       <?php      
         $dt = new ReadNewsArticle();
         var_dump($dt -> outIndx());  
+        var_dump($dt -> outNews());
       ?>
     </div>  
 

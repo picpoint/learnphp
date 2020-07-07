@@ -1,5 +1,6 @@
 @import "smart-grid.less";
 @import "var.less";
+@import "fonts.less";
 
 
 .reset();
@@ -9,10 +10,70 @@
 }
 
 .body {
-	box-sizing: border-box;
+  box-sizing: border-box;  
 }
 
 ////////// MIXINS BLOCK START
 
 ////////// MIXINS BLOCK END
 
+.wrp {
+  border: @border;   
+  display: flex;
+  flex-direction: column;
+  height: 120vh;
+  background-image: url("../../dist/pict/bkgbw.jpg");  
+  background-position:  100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+    &__menu {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      height: 100px;
+    }
+    &__logo {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      width: 10%;
+        a {
+          border: @border;
+          display: flex;
+          justify-content: center;
+          img {
+            height: 100%;
+          }    
+        }
+          
+    }
+    &__list {
+      border: @border;
+      display: flex;
+      justify-content: space-around;      
+      align-items: center;
+      width: 50%;      
+        a {                    
+          font-family: 'Hitman';
+          text-decoration: none;
+          font-size: 1rem;
+          color: black;          
+          font-weight: bolder;
+          transition: @transition;
+          &:hover {
+            transform: scale(1.2, 1.2);
+            border-bottom: 1px solid black;
+            transition: @transition;
+          }
+        }
+    }
+    &__enter {
+      border: @border;
+      display: flex;
+      width: 10%;
+    }
+
+
+
+
+}

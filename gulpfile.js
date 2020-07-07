@@ -10,7 +10,7 @@ const settings = {
 	dist: './dist',
 	srcless: './src/less/style.less',
 	srccss: './dist/css',
-	srchtml: './dist/*.php'  
+	srchtml: './dist/*.html'  
 };
 
 
@@ -68,7 +68,7 @@ gulp.task('preproc', function () {
 
 
 gulp.task('htmlmin', function () {
- gulp.src('./src/*.php')  
+ gulp.src('./src/*.html')  
   .pipe(gulp.dest('./dist'))
 		.pipe(browserSync.reload({
 				stream: true
@@ -78,7 +78,7 @@ gulp.task('htmlmin', function () {
 
 gulp.task('watch', ['preproc', 'htmlmin', 'browserSync'], function () {
 	gulp.watch(settings.srcless, ['preproc']);    
- 	gulp.watch('./src/*.php', ['htmlmin']);
+ 	gulp.watch('./src/*.html', ['htmlmin']);
 });
 
 gulp.task('grid', function () {
@@ -91,8 +91,8 @@ gulp.task('grid', function () {
 gulp.task('browserSync', function () {
 		browserSync.init({
 			server: {
-          // baseDir: settings.dist
-          proxy: 'http://localhost/www/learnphp/dist/'          
+          baseDir: settings.dist
+          // proxy: 'http://localhost/learnphp/dist/index.html'
           // http://localhost/www/learnphp/dist/
 			}
 		});

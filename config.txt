@@ -1,5 +1,0 @@
-localhost
-rmtar
-2203
-task8
-template

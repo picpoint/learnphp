@@ -119,7 +119,7 @@
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      height: 84%;
+      height: 80%;
         h3 {
           // border: @border;
           font-size: 9rem;
@@ -131,19 +131,89 @@
     }
 
     &__footer {
-      border: @border;
+      // border: @border;
       display: flex;
       flex-direction: column;
-      height: 8%;
+      height: 12%;      
+      box-shadow: 0px -11px 27px 10px rgba(0,0,0,0.89);
     }
-    &__info {
-      border: @border;
-      height: 80%;
+    &__mailcont {
+      // border: @border;
+      display: flex;
+      justify-content: center;
+      height: 75%;
     }
+    &__mcblock {
+      // border: @border;
+      display: flex;      
+      width: 60%;
+      padding-top: 10px;
+    }
+    &__mailing {
+      // border: @border;
+      display: flex;
+      flex-direction: column;      
+      align-items: center;
+      width: 50%;
+        span {
+          color: white;
+        }
+        input {
+          border: none;
+          height: 35%;
+          width: 300px;
+          margin: 1px;          
+          outline: none;
+          background-color: rgba(0, 0, 0, 0.01);
+          border: 3px solid white;
+          color: white;
+          padding-left: 7px;
+          text-decoration: white;
+            &::placeholder {
+              color: white;
+            }
+        }
+        button {
+          border: none;
+          height: 35%;
+          width: 313px;
+          margin: 1px;
+          font-weight: bolder;          
+          outline: none;
+          cursor: pointer;
+        }
+    }
+    &__contacts {      
+      // border: @border;                    
+      display: flex;
+      flex-direction: column;
+      justify-content: center;      
+      width: 50%;
+        span {
+          // border: @border;                    
+          color: white;
+          font-size: 1.1rem;
+          margin: 5px;
+          width: 95%;
+          text-align: center;
+          font-weight: bolder;
+        }
+    }
+
     &__copyright {
-      border: @border;
-      height: 20%;
+      // border: @border;
+      display: flex;
+      justify-content: center;            
+      align-items: center;
+      align-content: center;
+      height: 25%;
+        span {
+          // border: @border;                    
+          color: white;                              
+          font-size: 1.2rem;
+        }
     }
+    
 
 
 

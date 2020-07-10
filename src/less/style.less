@@ -310,11 +310,27 @@
       height: 80%;
         h3 {
           // border: @border;
-          font-size: 9rem;
-          // font-family: 'Rammstein';
+          font-size: 9rem;          
           font-family: 'Mutter';
           color: white;
           margin-bottom: 30px;
+          transition: @transition;
+            .xxl-block({
+              font-size: 7rem;
+              transition: @transition;
+            });
+            .xl-block({
+              font-size: 5rem;
+            });
+            .md-block({
+              font-size: 4rem;
+            });
+            .sm-block({
+              font-size: 3rem;
+            });
+            .xs-block({
+              display: none;
+            });
         }
     }
 
@@ -325,25 +341,51 @@
       height: 12%;      
       box-shadow: 0px -11px 27px 10px rgba(0, 0, 0, 0.89);
       background-color: rgba(0, 0, 0, 0.8);
+        .lg-block({          
+          height: 230px;
+        });
     }
     &__mailcont {
       // border: @border;
       display: flex;
       justify-content: center;
-      height: 75%;
+      height: 75%;        
     }
     &__mcblock {
       // border: @border;
       display: flex;      
       width: 60%;
-      padding-top: 10px;
+      // padding-top: 10px;
+      transition: @transition;
+      .mgxl-block({
+        width: 65%;
+        transition: @transition;
+      });
+      .lg-block({
+        flex-direction: column;        
+        justify-content: space-around;
+        width: 70%;
+        align-items: center;
+        transition: @transition;
+      });
+      .xs-block({
+        width: 95%;
+        transition: @transition;
+      });
     }
     &__mailing {
       // border: @border;
       display: flex;
       flex-direction: column;      
       align-items: center;
-      width: 50%;
+      width: 50%;      
+        .lg-block({
+          height: 100px;
+          width: 80%;
+        });
+        .md-block({
+          width: 90%;
+        });
         span {
           color: white;
         }
@@ -368,16 +410,24 @@
           width: 313px;
           margin: 1px;
           font-weight: bolder;          
+          background-color: white;
           outline: none;
-          cursor: pointer;
+          cursor: pointer;          
         }
     }
     &__contacts {      
-      // border: @border;                    
+      // border: @border;
       display: flex;
       flex-direction: column;
       justify-content: center;      
       width: 50%;
+        .lg-block({
+          height: 100px;
+          width: 80%;
+        });
+        .md-block({
+          width: 90%;
+        });
         span {
           // border: @border;                    
           color: white;
@@ -386,6 +436,9 @@
           width: 95%;
           text-align: center;
           font-weight: bolder;
+            .lg-block({
+              font-size: 1rem;
+            });
         }
     }
 
@@ -396,6 +449,7 @@
       align-items: center;
       align-content: center;
       height: 25%;
+      margin-bottom: 20px;
         span {
           // border: @border;                    
           color: white;                              

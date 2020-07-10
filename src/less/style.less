@@ -13,15 +13,38 @@
   box-sizing: border-box;  
 }
 
+
 ////////// HELPER CLASSES START
 .menutgl {
   display: flex!important;  
+  transition: @transition;
 }
 
 .listhght {
   height: 250px!important;
+  transition: @transition;
+}
+
+.linerotate {    
+  transform: rotate(45deg);    
+  position: relative;
+  top: 10px;
+  transition: @transition;
+}
+
+.linerotate2 {  
+  transform: rotate(-45deg);
+  position: relative;
+  top: -10px;
+  transition: @transition;
+}
+
+.hideelem {
+  display: none;
+  transition: @transition;
 }
 ////////// HELPER CLASSES START
+
 
 
 ////////// MIXINS BLOCK START
@@ -89,6 +112,7 @@
   width: 90%;
   background-color: white;      
   margin: 4px 0;
+  transition: @transition;
 }
 ////////// MIXINS BLOCK END
 

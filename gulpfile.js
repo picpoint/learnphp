@@ -76,9 +76,20 @@ gulp.task('htmlmin', function () {
 });
 
 
-gulp.task('watch', ['preproc', 'htmlmin', 'browserSync'], function () {
+gulp.task('js', function() {
+  gulp.src('./src/js/*.js')
+  .pipe(gulp.dest('./dist/js'))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
+});
+
+
+
+gulp.task('watch', ['preproc', 'htmlmin', 'js', 'browserSync'], function () {
 	gulp.watch(settings.srcless, ['preproc']);    
- 	gulp.watch('./src/*.html', ['htmlmin']);
+  gulp.watch('./src/*.html', ['htmlmin']);
+  gulp.watch('./src/js/*.js', ['js']);
 });
 
 gulp.task('grid', function () {

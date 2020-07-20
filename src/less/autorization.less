@@ -1,0 +1,55 @@
+@import "var.less";
+
+
+.auth {
+  // border: @border;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../pict/bkgauth.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+    &__authform {
+      border: @border;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+			height: 50%;
+			transition: @transition;
+				.sm-block({
+					width: 80%;
+					transition: @transition;
+				});
+        input {
+          border-radius: 5px;
+          width: 50%;
+          height: 30px;
+          margin: 10px 0;
+          padding-left: 7px;
+          color: black;
+          font-family: 'Hitman';
+          transition: @transition;
+						.lg-block({
+							width: 80%;
+						});
+        }
+        button {
+          border-radius: 5px;
+          width: 50%;
+          height: 40px;
+          color: white;
+          font-family: 'Hitman';
+          font-weight: bolder;
+					margin-top: 20px;
+					background-color: darkgray;
+          cursor: pointer;
+          transition: @transition;    
+						.lg-block({
+							width: 80%;
+						});   
+        }
+    }
+}

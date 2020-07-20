@@ -8,15 +8,20 @@
   background-image: url("../pict/bkgreg1.jpg");
   background-size: cover;
     &__regform {
-      border: @border;
+      // border: @border;
       display: flex;
       justify-content: center;
       align-items: center;
       width: 50%;
       height: 100%;
+      transition: @transition;
+        .sm-block({
+          width: 100%; 
+          transition: @transition;
+        });
     }    
     &__fields {
-      border: @border;
+      // border: @border;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -31,16 +36,35 @@
           padding-left: 7px;
           color: black;
           font-family: 'Hitman';
+          transition: @transition;
+            .lg-block({
+              width: 60%;
+              transition: @transition;
+            });
+            .md-block({
+              width: 80%;
+              transition: @transition;
+            });
         }
         button {
           border-radius: 5px;
-          width: 315px;
+          width: 50%;
           height: 40px;
-          color: black;
+          color: white;
           font-family: 'Hitman';
           font-weight: bolder;
-          cursor: pointer;
           margin-top: 20px;
+          cursor: pointer;
+          transition: @transition;    
+          background-color: darkgray;      
+            .lg-block({
+              width: 60%;
+              transition: @transition;
+            });
+            .md-block({
+              width: 80%;
+              transition: @transition;
+            });
         }
     }
 }

@@ -34,11 +34,11 @@
       <div class="wrp__enter">
         <div class="wrp__registration">
           <i class="fa fa-registered" aria-hidden="true"></i>
-          <a href="registration.html">РЕГИСТРАЦИЯ</a>
+          <a href="registration.php">РЕГИСТРАЦИЯ</a>
         </div>
         <div class="wrp__autorization">
           <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-          <a href="autorization.html">АВТОРИЗАЦИЯ</a>
+          <a href="autorization.php">АВТОРИЗАЦИЯ</a>
         </div>
       </div>
     </div>

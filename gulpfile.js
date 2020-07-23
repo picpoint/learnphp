@@ -10,7 +10,7 @@ const settings = {
 	dist: './dist',
 	srcless: './src/less/style.less',
 	srccss: './dist/css',
-	srchtml: './dist/*.html'  
+	srchtml: './dist/*.php'  
 };
 
 
@@ -68,7 +68,7 @@ gulp.task('preproc', function () {
 
 
 gulp.task('htmlmin', function () {
- gulp.src('./src/*.html')  
+ gulp.src('./src/*.php')  
   .pipe(gulp.dest('./dist'))
 		.pipe(browserSync.reload({
 				stream: true
@@ -88,7 +88,7 @@ gulp.task('js', function() {
 
 gulp.task('watch', ['preproc', 'htmlmin', 'js', 'browserSync'], function () {
 	gulp.watch(settings.srcless, ['preproc']);    
-  gulp.watch('./src/*.html', ['htmlmin']);
+  gulp.watch('./src/*.php', ['htmlmin']);
   gulp.watch('./src/js/*.js', ['js']);
 });
 

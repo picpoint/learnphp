@@ -26,7 +26,8 @@
   </section>
 
 <?php
-  
+  $out = new RegistrationController();
+  $out -> registrationUser();
 ?>
 </body>
 </html>

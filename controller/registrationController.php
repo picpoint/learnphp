@@ -7,11 +7,8 @@ class RegistrationController {
   public $password;
   public $email;
   public $regbutton;
+  public $datasUser = [];
 
-
-  public function __construct() {
-    
-  }
 
 
   public function registrationUser() {
@@ -19,6 +16,12 @@ class RegistrationController {
       $login = $_POST['reglogin'];
       $password = password_hash($_POST['regpass'], PASSWORD_DEFAULT);
       $email = $_POST['regemail'];
+
+      $datasUser[0] = $login;
+      $datasUser[1] = $password;
+      $datasUser[2] = $email;
+
+      return $datasUser;
     } 
 
     echo($login);

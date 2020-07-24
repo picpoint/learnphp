@@ -12,6 +12,7 @@
 <body>
 <?php
   include_once "../controller/registrationController.php";
+  include_once "../model/registrationModel.php";
 ?>
   
   <section class="reg">
@@ -26,8 +27,12 @@
   </section>
 
 <?php
-  $out = new RegistrationController();
-  $out -> registrationUser();
+  // $out = new RegistrationController();
+  // $out -> registrationUser();
+
+  $dts = new RegistrationModel();
+  var_dump($dts -> writeUserToDB());
+
 ?>
 </body>
 </html>

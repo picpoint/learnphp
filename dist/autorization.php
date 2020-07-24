@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +14,7 @@
     <form method="POST" class="auth__authform">
       <input type="text" name="authlogin" placeholder="логин">
       <input type="password" name="authpass" placeholder="пароль">
-      <button type="submit">ВОЙТИ</button>
+      <button type="submit" name="authbth">ВОЙТИ</button>
     </form>
   </section>
 </body>

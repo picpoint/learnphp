@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal page</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../dist/css/style.css">
 </head>
 <body>
   <section class="lk">
@@ -12,7 +12,7 @@
     <div class="lk__siteheader">      
       <div class="lk__profile">
         <div class="lk__profilepict">
-          <img src="pict/default_avatar.jpg" alt="avatar">
+          <img src="../dist/pict/default_avatar.jpg" alt="avatar">
         </div>
         <div class="lk__profilelogin">
           <span>noname</span>

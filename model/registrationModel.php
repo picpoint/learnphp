@@ -4,12 +4,11 @@ ini_set('error_reporting', E_ALL);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 
-include_once "../controller/registrationController.php";
+include_once "../controller/registrationController.php";                                                // подключаем контроллер регистрации пользователей
 
 
-class RegistrationModel {
-  protected $cnct;
-
+class RegistrationModel {                                                                               // класс модель для записи данных регистрации в БД
+  
   public function __construct() {    
     $this->cnct = new PDO('mysql:host=localhost;dbname=rammstein', 'rmtar', '2203');
   } 
@@ -18,8 +17,7 @@ class RegistrationModel {
   public function writeUserToDB() {
     $dt = new RegistrationController();
     $datasUser = $dt -> registrationUser();
-
-    //return $datasUser[1];
+    
     $log = trim($datasUser[0]);
     $pass = trim($datasUser[1]);
     $email = trim($datasUser[2]);

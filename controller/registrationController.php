@@ -25,7 +25,7 @@ class RegistrationController {                                                  
       $datasUser[2] = $email;                                                                         // -||- записываем $email
 
       return $datasUser;
-    }     
+    }
   }
 
 

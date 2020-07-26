@@ -1,3 +1,13 @@
+<?php
+  session_start();
+  setcookie($_SESSION['login'], session_id(), time() + 86400);
+
+  ini_set('error_reporting', E_ALL);
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +25,11 @@
           <img src="../dist/pict/default_avatar.jpg" alt="avatar">
         </div>
         <div class="lk__profilelogin">
-          <span>noname</span>
+          <span>
+            <?php
+              echo($_SESSION['login']);
+            ?>
+          </span>
         </div>
       </div>
       <div class="lk__menu">
@@ -24,7 +38,7 @@
           <a href="#">Галерея</a>
         </div>
         <div class="lk__logout">
-          <a href="#">Выход</a>
+          <a href="../controller/logOut.php">Выход</a>
         </div>
       </div>
     </div>

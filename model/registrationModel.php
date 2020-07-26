@@ -9,21 +9,28 @@ include_once "../controller/registrationController.php";                        
 
 class RegistrationModel {                                                                               // класс модель для записи данных регистрации в БД
   
-  public function __construct() {    
-    $this->cnct = new PDO('mysql:host=localhost;dbname=rammstein', 'rmtar', '2203');
+  public function __construct() {
+    $this->cnct = new PDO('mysql:host=localhost;dbname=rammstein', 'rmtar', '2203');                    // автоматическое подключение к бд в конструкторе
   } 
 
 
-  public function writeUserToDB() {
-    $dt = new RegistrationController();
-    $datasUser = $dt -> registrationUser();
+  public function writeUserToDB() {                                                                     // метод для записи данных о пользователе в БД
+    $dt = new RegistrationController();                                                                 // создаём объект класса контроллера
+    $datasUser = $dt -> registrationUser();                                                             // вызываем метод класса 
     
-    $log = trim($datasUser[0]);
+    $log = trim(mb_strtolower($datasUser[0]));                                                          // присваиваем в логин пароль и email данные из массива
     $pass = trim($datasUser[1]);
     $email = trim($datasUser[2]);
-        
-    $sth = $this->cnct -> prepare("INSERT INTO users (login, password, email) VALUES('$log', '$pass', '$email');");    
-    $sth -> execute();
+
+    if(!empty($log) && !empty($pass) && !empty($email)) {                                               // если переменные пришедшего массива из контроллера не пустые
+      $sth = $this->cnct -> prepare("INSERT INTO users (login, password, email) VALUES('$log', '$pass', '$email');");   // подготавливаем запрос для записи
+      $sth -> execute();                                                                                  // выполняем запись данных о пользователе
+      header('location: ../view/userPage.php');
+      $_SESSION['login'] = $log;
+    } else {
+      return false;
+    }
+    
 
   }
   

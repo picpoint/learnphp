@@ -23,6 +23,25 @@ class RegistrationModel {                                                       
     $email = trim($datasUser[2]);
 
     if(!empty($log) && !empty($pass) && !empty($email)) {                                               // если переменные пришедшего массива из контроллера не пустые
+      
+      $sth = $this->cnct -> prepare("SELECT login FROM users");
+      $sth -> execute();
+      $data = $sth -> fetchAll(PDO::FETCH_ASSOC);      
+
+      foreach($data as $dt) {
+        foreach($dt as $key => $value) {
+          // echo("$key - $value");
+          // echo("<br>");
+          if($log == $value) {
+            echo("Такой пользователь уже существует");
+          }
+        }
+      }
+      
+      die();
+
+
+
       $sth = $this->cnct -> prepare("INSERT INTO users (login, password, email) VALUES('$log', '$pass', '$email');");   // подготавливаем запрос для записи
       $sth -> execute();                                                                                  // выполняем запись данных о пользователе
       header('location: ../view/userPage.php');

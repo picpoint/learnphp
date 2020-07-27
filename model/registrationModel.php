@@ -8,7 +8,7 @@ include_once "../controller/registrationController.php";                        
 
 
 class RegistrationModel {                                                                               // класс модель для записи данных регистрации в БД
-  public $issetUsr;
+  public $issetUsr;                                                                                     // переменная для проверки, зареган ли юзер
   
   public function __construct() {
     $this->cnct = new PDO('mysql:host=localhost;dbname=rammstein', 'rmtar', '2203');                    // автоматическое подключение к бд в конструкторе
@@ -26,49 +26,27 @@ class RegistrationModel {                                                       
     if(!empty($log) && !empty($pass) && !empty($email)) {                                               // если переменные пришедшего массива из контроллера не пустые      
       $sth = $this->cnct -> prepare("SELECT login FROM users");                                         // делаем запрос в БД по всем логинам
       $sth -> execute();
-      $data = $sth -> fetchAll(PDO::FETCH_ASSOC);                                                       // получаем массив данных
+      $data = $sth -> fetchAll(PDO::FETCH_ASSOC);                                                       // получаем массив данных логинов
 
-      foreach($data as $dt) {        
-        if(in_array($log, $dt)) {
-          echo("Такой пользователь уже существует"); 
-          return false;
-        } else {
-          $sth = $this->cnct -> prepare("INSERT INTO users (login, password, email) VALUES('$log', '$pass', '$email');");   // подготавливаем запрос для записи
-          $sth -> execute();                                                                                  // выполняем запись данных о пользователе
-          header('location: ../view/userPage.php');
-          $_SESSION['login'] = $log;
-          return true;
-        }        
+      foreach($data as $dt) {                                                                           // пробегаемся по массиву логинов
+        if(in_array($log, $dt)) {                                                                       // если введённый логин совпадает с логином из БД          
+          $issetUsr = true;                                                                             // переменной присваиваем true
+        }  
       }
-      
-      
-      // foreach($data as $dt) {                                                                           
-      //   foreach($dt as $key => $value) {          
-      //     if($log == $value) {
-      //       //echo("Такой пользователь уже существует");                                                  // ***********************************
-      //       $issetUsr = true;
-      //     } else {
-      //       $issetUsr = false;            
-      //     }
-      //   }
-      // }
-
-      
-      // if($issetUsr == true) {
-      //   echo("Такой пользователь уже существует"); 
-      //   return false;        
-      // } else {
-      //   $sth = $this->cnct -> prepare("INSERT INTO users (login, password, email) VALUES('$log', '$pass', '$email');");   // подготавливаем запрос для записи
-      //   $sth -> execute();                                                                                  // выполняем запись данных о пользователе
-      //   header('location: ../view/userPage.php');
-      //   $_SESSION['login'] = $log;
-      // }
-      
+                 
+      if($issetUsr == true) {                                                                           // если переменная true, пользователь существует
+        echo("Такой пользователь уже существует"); 
+        return false;
+      } else {
+        $sth = $this->cnct -> prepare("INSERT INTO users (login, password, email) VALUES('$log', '$pass', '$email');"); // подготавливаем запрос для записи в БД
+        $sth -> execute();                                                                               // выполняем запись данных о пользователе
+        header('location: ../view/userPage.php');                                                        // перенапрявляем его на личную страницу ЛК
+        $_SESSION['login'] = $log;                                                                       // в сессию записываем логин под которым он регается
+      }      
 
     } else {
       return false;
-    }
-    
+    }    
 
   }
   

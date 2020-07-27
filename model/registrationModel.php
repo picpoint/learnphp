@@ -8,6 +8,7 @@ include_once "../controller/registrationController.php";                        
 
 
 class RegistrationModel {                                                                               // класс модель для записи данных регистрации в БД
+  public $issetUsr;
   
   public function __construct() {
     $this->cnct = new PDO('mysql:host=localhost;dbname=rammstein', 'rmtar', '2203');                    // автоматическое подключение к бд в конструкторе
@@ -27,20 +28,42 @@ class RegistrationModel {                                                       
       $sth -> execute();
       $data = $sth -> fetchAll(PDO::FETCH_ASSOC);                                                       // получаем массив данных
 
-      foreach($data as $dt) {                                                                           
-        foreach($dt as $key => $value) {          
-          if($log == $value) {
-            echo("Такой пользователь уже существует");                                                  // ***********************************
-            return false;
-          } else {
-            $sth = $this->cnct -> prepare("INSERT INTO users (login, password, email) VALUES('$log', '$pass', '$email');");   // подготавливаем запрос для записи
-            $sth -> execute();                                                                                  // выполняем запись данных о пользователе
-            header('location: ../view/userPage.php');
-            $_SESSION['login'] = $log;
-          }
-        }
-
+      foreach($data as $dt) {        
+        if(in_array($log, $dt)) {
+          echo("Такой пользователь уже существует"); 
+          return false;
+        } else {
+          $sth = $this->cnct -> prepare("INSERT INTO users (login, password, email) VALUES('$log', '$pass', '$email');");   // подготавливаем запрос для записи
+          $sth -> execute();                                                                                  // выполняем запись данных о пользователе
+          header('location: ../view/userPage.php');
+          $_SESSION['login'] = $log;
+          return true;
+        }        
       }
+      
+      
+      // foreach($data as $dt) {                                                                           
+      //   foreach($dt as $key => $value) {          
+      //     if($log == $value) {
+      //       //echo("Такой пользователь уже существует");                                                  // ***********************************
+      //       $issetUsr = true;
+      //     } else {
+      //       $issetUsr = false;            
+      //     }
+      //   }
+      // }
+
+      
+      // if($issetUsr == true) {
+      //   echo("Такой пользователь уже существует"); 
+      //   return false;        
+      // } else {
+      //   $sth = $this->cnct -> prepare("INSERT INTO users (login, password, email) VALUES('$log', '$pass', '$email');");   // подготавливаем запрос для записи
+      //   $sth -> execute();                                                                                  // выполняем запись данных о пользователе
+      //   header('location: ../view/userPage.php');
+      //   $_SESSION['login'] = $log;
+      // }
+      
 
     } else {
       return false;

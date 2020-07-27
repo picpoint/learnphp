@@ -37,7 +37,7 @@
   // $out -> registrationUser();
 
   $dts = new RegistrationModel();
-  var_dump($dts -> writeUserToDB());
+  $dts -> writeUserToDB();
 
 ?>
 </body>

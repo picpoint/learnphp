@@ -1,5 +1,6 @@
 <?php
   session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,6 +11,10 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <?php 
+    require_once "../controller/autorizationController.php";
+    require_once "../model/autorizationModel.php";
+  ?>
   <section class="auth">
     <form method="POST" class="auth__authform">
       <input type="text" name="authlogin" placeholder="логин">
@@ -17,5 +22,15 @@
       <button type="submit" name="authbth">ВОЙТИ</button>
     </form>
   </section>
+
+  <?php
+    // $out = new AutorizationController();
+    // $out->findUser();
+
+    $out = new AutorizationModel();
+    var_dump($out -> autorizationUser());
+
+  ?>
+
 </body>
 </html>

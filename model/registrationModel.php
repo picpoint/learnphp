@@ -35,7 +35,7 @@ class RegistrationModel {                                                       
       }
                  
       if($issetUsr == true) {                                                                           // если переменная true, пользователь существует
-        echo("Такой пользователь уже существует"); 
+        echo("Такой пользователь уже существует");         
         return false;
       } else {
         $sth = $this->cnct -> prepare("INSERT INTO users (login, password, email) VALUES('$log', '$pass', '$email');"); // подготавливаем запрос для записи в БД

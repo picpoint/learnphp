@@ -12,8 +12,7 @@ class RegistrationController {                                                  
   public $regbutton;
   public $datasUser = [];
 
-
-
+  
   public function registrationUser() {                                                                // метод для регистрации пользователей
     if(isset($_POST['regbtn']) && !empty($_POST['reglogin']) && !empty($_POST['regpass']) && !empty($_POST['regemail'])) { // если кнопка "Зарегистрироваться" нажата и поля не пустые
       $login = trim($_POST['reglogin']);                                                              // в $login присваиваем что пришло постом из поля reglogin
@@ -28,8 +27,5 @@ class RegistrationController {                                                  
     }
   }
 
-
-
-
-
+  
 }

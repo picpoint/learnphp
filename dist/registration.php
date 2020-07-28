@@ -32,13 +32,9 @@
     </form>
   </section>
 
-<?php
-  // $out = new RegistrationController();
-  // $out -> registrationUser();
-
+<?php  
   $dts = new RegistrationModel();
   $dts -> writeUserToDB();
-
 ?>
 </body>
 </html>

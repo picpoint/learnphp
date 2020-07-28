@@ -1,6 +1,5 @@
 <?php
   session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,12 +23,8 @@
   </section>
 
   <?php
-    // $out = new AutorizationController();
-    // $out->findUser();
-
     $out = new AutorizationModel();
     $out -> autorizationUser();
-
   ?>
 
 

@@ -24,30 +24,33 @@ class AutorizationModel {
 
     $sth = $this->cnct -> prepare("SELECT login, password FROM users");
     $sth -> execute();
-    $queryBD = $sth -> fetchAll(PDO::FETCH_ASSOC);
-    
-    // return $queryBD;
-    //return $logPass;
+    $queryBD = $sth -> fetchAll(PDO::FETCH_ASSOC);    
 
-    foreach($queryBD as $qdb) {
-      foreach($qdb as $key => $value) {
-        echo("$key - $value");
-        echo("<br>");
-        
-        
-
-
-        // if($key == 'login' && $logPass[0] == $value) {
-        //   echo("$logPass[0] == $value");
-        //   continue;
-        //   if($key == 'password' && $logPass[1] == password_verify($logPass[1], $value)) {
-        //     echo('********AUTH*************');
-        //   }
-        // }
-
+    foreach($queryBD as $qdb) {      
+      foreach($qdb as $key => $value) {        
+        if($key == 'login') {
+          $arrLog[] = $value;
+        } elseif($key == 'password') {
+          $arrPass[] = $value;
+        }
         
       }
     }
+
+    $fullArr = array_combine($arrLog, $arrPass);
+
+    foreach($fullArr as $key => $value) {
+      echo("$key - $value");
+      echo("<br>");
+
+      if(($logPass[0] == $key)  &&  ($logPass[1] == password_verify($logPass[1], $value))) {
+        echo("AUTH");
+      } else {
+        echo('not ...........');
+      }
+    }
+
+
   }
   
 

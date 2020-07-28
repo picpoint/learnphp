@@ -28,7 +28,7 @@
     // $out->findUser();
 
     $out = new AutorizationModel();
-    var_dump($out -> autorizationUser());
+    $out -> autorizationUser();
 
   ?>
 

@@ -38,16 +38,14 @@ class AutorizationModel {
     }
 
     $fullArr = array_combine($arrLog, $arrPass);
+    echo("$logPass[0] - $logPass[1]");
+    echo("<br>");      
 
-    foreach($fullArr as $key => $value) {
-      echo("$key - $value");
-      echo("<br>");
-
-      if(($logPass[0] == $key)  &&  ($logPass[1] == password_verify($logPass[1], $value))) {
-        echo("AUTH");
-      } else {
-        echo('not ...........');
-      }
+    foreach($fullArr as $key => $value) {      
+      if($logPass[0] == $key && $logPass[1] == password_verify($logPass[1], $value)) {
+        header('location: ../view/userPage.php');                
+        $_SESSION['login'] = $logPass[0];
+      }      
     }
 
 

@@ -8,6 +8,9 @@ require_once "../controller/autorizationController.php";
 
 
 class AutorizationModel {
+  public $arrLog = [];
+  public $arrPass = [];
+  public $assocArr = [];
   
   public function __construct() {
     $this->cnct = new PDO('mysql:host=localhost;dbname=rammstein', 'rmtar', '2203');
@@ -23,7 +26,28 @@ class AutorizationModel {
     $sth -> execute();
     $queryBD = $sth -> fetchAll(PDO::FETCH_ASSOC);
     
-    return $queryBD;
+    // return $queryBD;
+    //return $logPass;
+
+    foreach($queryBD as $qdb) {
+      foreach($qdb as $key => $value) {
+        echo("$key - $value");
+        echo("<br>");
+        
+        
+
+
+        // if($key == 'login' && $logPass[0] == $value) {
+        //   echo("$logPass[0] == $value");
+        //   continue;
+        //   if($key == 'password' && $logPass[1] == password_verify($logPass[1], $value)) {
+        //     echo('********AUTH*************');
+        //   }
+        // }
+
+        
+      }
+    }
   }
   
 

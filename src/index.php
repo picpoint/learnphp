@@ -18,8 +18,9 @@
 <body>
 <?php
   require_once "../controller/autoInputController.php";  
+  
   $inp = new AutoInput();
-  $inp->autoInp();
+  var_dump($inp->autoInp());
 ?>
   <section class="wrp">
     

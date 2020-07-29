@@ -1,5 +1,9 @@
 <?php
   session_start();
+
+  ini_set('error_reporting', E_ALL);
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +16,11 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
+<?php
+  require_once "../controller/autoInputController.php";  
+  $inp = new AutoInput();
+  $inp->autoInp();
+?>
   <section class="wrp">
     
     <div class="wrp__menu">

@@ -16,12 +16,6 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
-<?php
-  require_once "../controller/autoInputController.php";  
-  
-  $inp = new AutoInput();
-  var_dump($inp->autoInp());
-?>
   <section class="wrp">
     
     <div class="wrp__menu">
@@ -84,9 +78,14 @@
       </div>
     </div>
 
-
-
   </section>  
+
+<?php
+  require_once "../controller/autoInputController.php";    
+  $inp = new AutoInput();
+  $inp->autoInp();
+?>
+
 <script src="js/burger.js"></script>
 </body> 
 </html>

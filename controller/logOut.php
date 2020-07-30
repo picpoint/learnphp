@@ -2,6 +2,6 @@
 
 
 
-setcookie($_SESSION['login'], session_id(), time() - 86400);
+setcookie($_SESSION['login'], $_SESSION['password'], time() - 604800);
 session_destroy();
 header('location: ../dist/index.php');

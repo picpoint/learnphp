@@ -1,5 +1,6 @@
 <?php
   session_start();
+  setcookie($_SESSION['login'], $_SESSION['password'], time() - 604800);
 
   ini_set('error_reporting', E_ALL);
   ini_set('display_errors', 1);
@@ -16,8 +17,15 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
-  <section class="wrp">
-    
+
+<?php
+  require_once "../controller/autoInputController.php";    
+  $inp = new AutoInput();
+  $inp->autoInp();
+?>
+  
+  <section class="wrp">    
+
     <div class="wrp__menu">
       <div class="wrp__logo">
         <a href="#">
@@ -79,12 +87,6 @@
     </div>
 
   </section>  
-
-<?php
-  require_once "../controller/autoInputController.php";    
-  $inp = new AutoInput();
-  $inp->autoInp();
-?>
 
 <script src="js/burger.js"></script>
 </body> 

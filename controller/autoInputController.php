@@ -32,12 +32,9 @@ class AutoInput {
       foreach($arrAssoc as $key => $value) {            
         if($_SESSION['login'] == $key && $_SESSION['password'] == $value) {
           header('location: ../view/userPage.php');
-        } else {
-          header('location: ../dist/index.php');
-        }
+        } 
       }
-
-    }    
+    } 
     
 
 

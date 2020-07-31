@@ -1,6 +1,6 @@
 <?php
   session_start();
-  setcookie($_SESSION['login'], $_SESSION['password'], time() - 604800);
+  // setcookie($_SESSION['login'], $_SESSION['password'], time() - 604800);
 
   ini_set('error_reporting', E_ALL);
   ini_set('display_errors', 1);
@@ -17,12 +17,6 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
-
-<?php
-  require_once "../controller/autoInputController.php";    
-  $inp = new AutoInput();
-  $inp->autoInp();
-?>
   
   <section class="wrp">    
 

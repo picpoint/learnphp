@@ -1,6 +1,6 @@
 <?php
   session_start();
-  setcookie($_SESSION['login'], $_SESSION['password'], time() + 86400);
+  // setcookie($_SESSION['login'], $_SESSION['password'], time() + 86400);
 
   ini_set('error_reporting', E_ALL);
   ini_set('display_errors', 1);
@@ -38,7 +38,7 @@
           <a href="#">Галерея</a>
         </div>
         <div class="lk__logout">
-          <a href="../controller/logOut.php">Выход</a>
+          <a href="../dist/index.php">Выход</a>
         </div>
       </div>
     </div>

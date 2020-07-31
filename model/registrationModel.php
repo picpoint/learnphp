@@ -42,7 +42,7 @@ class RegistrationModel {                                                       
         $sth -> execute();                                                                               // выполняем запись данных о пользователе
         header('location: ../view/userPage.php');                                                        // перенапрявляем его на личную страницу ЛК
         $_SESSION['login'] = $log;                                                                       // в сессию записываем логин под которым он регается
-        $_SESSION['password'] = $pass;
+        // $_SESSION['password'] = $pass;
       }      
 
     } else {

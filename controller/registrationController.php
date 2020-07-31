@@ -21,8 +21,7 @@ class RegistrationController {                                                  
 
       $datasUser[0] = $login;                                                                         // в массив $datasUser записываем $login
       $datasUser[1] = $password;                                                                      // -||- записываем $password
-      $datasUser[2] = $email;                                                                         // -||- записываем $email
-      $_SESSION['pass'] = $password;
+      $datasUser[2] = $email;                                                                         // -||- записываем $email      
 
       return $datasUser;
     }

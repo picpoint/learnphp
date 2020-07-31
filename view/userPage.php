@@ -47,8 +47,14 @@
       <form method="POST" enctype="multipart/form-data" class="lk__uploadform">
         <input type="file" name="uploadfield">
         <button type="submit" name="uploadbtn">Загрузить</button>
-      </form>
+      </form>      
     </div>
+    
+    <?php
+      require_once "../controller/createUserFolder.php";
+      $res = new CheckAndCreateFolder();
+      $res -> checkCreate();
+    ?>
 
     <div class="lk__content">
       <div class="lk__photo">

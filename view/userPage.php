@@ -49,19 +49,31 @@
         <button type="submit" name="uploadbtn">Загрузить</button>
       </form>      
     </div>
-    
-    <?php
-      require_once "../controller/createUserFolder.php";
-      $res = new CheckAndCreateFolder();
-      $res -> checkCreate();
-    ?>
 
-    <div class="lk__content">
-      <div class="lk__photo">
+    <div class="lk__msgs">
+      <span>
+      <?php
+        require_once "../controller/createUserFolder.php";
+        $res = new CheckAndCreateFolder();
+        $res -> checkCreate();
+      ?>
+      </span>
+    </div>   
 
-      </div>
+    <div class="lk__content">      
       <div class="lk__music">
-        
+        <?php
+          // require_once "../controller/showGaleryController.php";
+          // $out = new ShowGalery();
+          // $out -> showPictures();
+        ?>
+      </div>
+      <div class="lk__photo">
+        <?php
+          require_once "../model/showGaleryModel.php";
+          $out = new GetUserContent();
+          $out -> getContent();
+        ?>
       </div>
     </div>
 

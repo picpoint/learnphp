@@ -63,16 +63,16 @@
     <div class="lk__content">      
       <div class="lk__music">
         <?php
-          // require_once "../controller/showGaleryController.php";
-          // $out = new ShowGalery();
-          // $out -> showPictures();
+          require_once "../controller/showGaleryController.php";
+          $out = new ShowGalery();
+          $out -> showMusic();
         ?>
       </div>
       <div class="lk__photo">
         <?php
-          require_once "../model/showGaleryModel.php";
-          $out = new GetUserContent();
-          $out -> getContent();
+          require_once "../controller/showGaleryController.php";
+          $out = new ShowGalery();
+          $out -> showPictures();
         ?>
       </div>
     </div>

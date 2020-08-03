@@ -10,13 +10,26 @@ class GetUserContent {
     $usrFolder = $pathToFolder . '/' . $usr;
     $pict = $usrFolder . '/picture';
     $muz = $usrFolder . '/music';    
+    $usrContent = [];
 
-    var_dump(scandir($pathToFolder));
-    echo("<br>");
-    echo($usr);
-    echo("<br>");
-    var_dump(scandir($usrFolder));
+    // var_dump(scandir($pathToFolder));
+    // echo("<br>");
+    // echo($usr);
+    // echo("<br>");
+    // var_dump(scandir($usrFolder));
+    // echo("<br>");
+    // echo("<br>");
+    // var_dump(scandir($pict));
+    // echo("<br>");
+    // echo("<br>");
+    // var_dump(scandir($muz));
 
+    $usrContent[] = $pict;
+    $usrContent[] = $muz;
+
+    return $usrContent;
+
+    
   }
 
 

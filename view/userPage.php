@@ -78,7 +78,6 @@
       </div>
     </div>
 
-
   </section>
 
 <script src="../dist/js/checkMuzPict.js"></script>

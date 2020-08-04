@@ -2,9 +2,10 @@
   session_start();
   // setcookie($_SESSION['login'], $_SESSION['password'], time() + 86400);
 
-  ini_set('error_reporting', E_ALL);
-  ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
+  error_reporting(0);
+  // ini_set('error_reporting', E_ALL);
+  // ini_set('display_errors', 1);
+  // ini_set('display_startup_errors', 1);
 
 ?>
 
@@ -34,8 +35,8 @@
       </div>
       <div class="lk__menu">
         <div class="lk__linkscontent">
-          <a href="#">Слушать</a>
-          <a href="#">Галерея</a>
+          <a href="#" class="listen">Слушать</a>
+          <a href="#" class="galery">Галерея</a>
         </div>
         <div class="lk__logout">
           <a href="../dist/index.php">Выход</a>
@@ -79,5 +80,7 @@
 
 
   </section>
+
+<script src="../dist/js/checkMuzPict.js"></script>
 </body>
 </html>

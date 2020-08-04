@@ -11,7 +11,7 @@ class ShowGalery {
     $usrContent = $datas -> getContent();
     $usr = $_SESSION['login'];
     
-    foreach($usrContent as $key => $val) {      
+    foreach($usrContent as $key => $val) {
       $files = scandir($val);
       foreach($files as $key => $value) {        
         $info = new SplFileInfo($value);
@@ -20,8 +20,9 @@ class ShowGalery {
           echo("<img src=" . "../usersFolders/$usr/picture/$value" . ">");          
         }
       }
-
     }
+
+
   }
 
 
@@ -43,8 +44,8 @@ class ShowGalery {
           echo("</div>");
         }
       }
-
     }
+    
   }
 
 

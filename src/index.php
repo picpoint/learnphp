@@ -36,7 +36,7 @@
       </div>
 
       <div class="wrp__list">
-        <a href="#" class="wrp__link">О ГРУППЕ</a>
+        <a href="about.php" class="wrp__link">О ГРУППЕ</a>
         <a href="#" class="wrp__link">СЛУШАТЬ</a>
         <a href="#" class="wrp__link">АФИША</a>
         <a href="#" class="wrp__link">ГАЛЕРЕЯ</a>

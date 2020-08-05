@@ -1,0 +1,61 @@
+@import "var.less";
+
+
+////////// MIXINS BLOCK START
+.mixinblocktext {
+  // border: @border;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  background-image: url("../pict/bglk.jpg");
+    h3 {
+      // border: @border;
+      font-size: 3rem;
+      font-weight: bolder;
+      text-align: center;
+    }
+    span {
+      align-self: center;
+      font-size: 1.3rem;
+      width: 80%;          
+      padding-top: 30px;
+    }
+}
+
+.mixinpict { 
+  // border: @border;
+  display: flex;
+  height: 450px;
+}
+////////// MIXINS BLOCK END
+
+
+.abt {
+  // border: @border;
+  display: flex; 
+  flex-direction: column;   
+  color: white;
+    &__biography {
+      .mixinblocktext();
+    }
+    &__pict {
+      .mixinpict();
+    }
+
+    &__historycreate {
+      .mixinblocktext();
+    }
+    
+    &__music {
+      .mixinblocktext();
+    }
+
+    &__scandals {
+      .mixinblocktext();
+    }
+
+    &__teamnow {
+      .mixinblocktext();
+    }
+
+}

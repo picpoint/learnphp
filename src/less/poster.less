@@ -1,0 +1,74 @@
+@import "var.less";
+
+
+
+.pst {
+  border: @border;
+  display: flex;
+  flex-direction: column;    
+  background-image: url("../pict/bkgposter.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+    &__hdr {
+      border: @border;
+      display: flex;
+      justify-content: center;      
+      align-items: center;
+      height: 150px;
+      margin-top: 100px;
+      color: white;
+        h1 {
+          border: @border;
+          text-align: center;
+          font-size: 6rem;
+          font-weight: bolder;
+        }
+    }  
+    &__timetable {
+      border: @border;
+      display: flex;
+      justify-content: center;
+      height: 1500px;
+      margin-top: 70px;
+    }
+    &__tableblock {
+      border: @border;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 70%;
+      background-color: white;
+      border-radius: 15px;
+    }
+    &__tabledatas {
+      // border: @border;
+      display: flex;
+      height: 100px;
+      width: 85%;
+      border-bottom: 1px solid #e0e0e0;
+      transition: @transition;
+        &:nth-child(1) {
+          margin-top: 50px;
+          transition: @transition;
+        }
+        &:hover {
+          background-color: @pstbkgpost;
+          transition: @transition;
+        }
+    }
+    &__dateblock {
+      border: @border;
+      width: 25%;
+    }
+    &__placeblock {
+      border: @border;
+      width: 45%;
+    }
+    &__btnblock {
+      border: @border;
+      width: 30%;
+    }
+
+
+}

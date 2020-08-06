@@ -6,19 +6,63 @@
   // border: @border;
   display: flex;
   flex-direction: column;
-  height: 250px;
+  justify-content: center;
+  height: 300px;
   background-image: url("../pict/bglk.jpg");
+    .sm-block({
+      height: 350px;
+    });
+    .xs-block({            
+      height: 450px;      
+    });
     h3 {
       // border: @border;
       font-size: 3rem;
       font-weight: bolder;
-      text-align: center;
+      text-align: center;      
+      margin-top: 20px;
+      transition: @transition;
+        .xl-block({
+          font-size: 2.7rem;
+        });
+        .lg-block({
+          font-size: 2.3rem;
+          transition: @transition;
+        });
+        .md-block({
+          margin-top: 10px;
+          transition: @transition;
+        });
+        .sm-block({
+          margin-top: 5px;
+          font-size: 2rem;
+          transition: @transition;
+        });
+        .xs-block({
+          font-size: 1.5rem;
+          transition: @transition;
+        });
     }
     span {
+      // border: @border;
       align-self: center;
       font-size: 1.3rem;
       width: 80%;          
-      padding-top: 30px;
+      margin-top: 20px;
+      transition: @transition;
+        .xl-block({
+          font-size: 1.2rem;
+          transition: @transition;
+        });
+        .lg-block({
+          font-size: 1.1rem;
+          width: 90%;
+          transition: @transition;
+        });
+        .md-block({
+          font-size: 1rem;
+          transition: @transition;
+        });
     }
 }
 
@@ -26,6 +70,7 @@
   // border: @border;
   display: flex;
   height: 450px;
+  width: 100%;
 }
 ////////// MIXINS BLOCK END
 

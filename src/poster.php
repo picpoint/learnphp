@@ -17,14 +17,29 @@
       <div class="pst__tableblock">
         
         <div class="pst__tabledatas">
-          <div class="pst__dateblock">            
+          <div class="pst__dateblock">      
+            <div class="pst__number">
+              <span>22</span>
+            </div>
+            <div class="pst__monthyear">
+              <span>Май 2021</span>
+            </div>
           </div>
+          
           <div class="pst__placeblock">
+            <div class="pst__place">
+              <span>Лейпциг</span>
+              <span>Red Bull Arena</span>
+            </div>
           </div>
           <div class="pst__btnblock">
+            <button>Выбрать билеты</button>
           </div>
+
         </div>
         
+
+
         <div class="pst__tabledatas">
           <span>2</span>
         </div>

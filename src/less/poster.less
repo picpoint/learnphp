@@ -58,16 +58,75 @@
         }
     }
     &__dateblock {
-      border: @border;
+      // border: @border;
+      display: flex;
+      justify-content: center;
       width: 25%;
+      margin-left: 15px;
     }
+    &__number {
+      // border: @border;
+      display: flex;
+      justify-content: center;
+      width: 40%;
+        span {
+          font-size: 5rem;
+          font-weight: bolder;
+        }
+    }
+    &__monthyear {
+      // border: @border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+      span {
+        font-size: 1.5rem;
+        font-weight: bolder;
+      }
+    }
+
+
     &__placeblock {
-      border: @border;
-      width: 45%;
+      // border: @border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
     }
+    &__place {
+      display: flex;
+      flex-direction: column;
+        span {
+          // border: @border;
+          text-align: center;
+          margin: 5px;
+          &:nth-child(1) {
+            font-size: 2rem;
+            font-weight: bolder;
+          }
+        }
+    }
+
     &__btnblock {
-      border: @border;
-      width: 30%;
+      // border: @border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+      margin-right: 15px;
+        button {
+          border: none;
+          width: 250px;
+          height: 55px;
+          border-radius: 15px;
+          background-color: @pstcolorbtn;
+          font-size: 1rem;
+          font-weight: bolder;
+          color: white;
+          outline: none;
+          cursor: pointer;          
+        }
     }
 
 

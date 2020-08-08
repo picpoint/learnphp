@@ -51,7 +51,6 @@
     </div>
 
   </section>
-
-  <!-- https://rammstein.com.ru/events -->
+  
 </body>
 </html>

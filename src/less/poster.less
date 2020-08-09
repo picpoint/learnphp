@@ -28,9 +28,8 @@
     &__timetable {
       // border: @border;
       display: flex;
-      justify-content: center;
-      height: 1500px;
-      margin-top: 70px;
+      justify-content: center;      
+      margin: 100px 0;
     }
     &__tableblock {
       // border: @border;
@@ -47,14 +46,16 @@
       height: 100px;
       width: 85%;
       border-bottom: 1px solid #e0e0e0;
-      transition: @transition;
-        &:nth-child(1) {
-          margin-top: 50px;
-          transition: @transition;
-        }
+      transition: @transition;        
         &:hover {
           background-color: @pstbkgpost;
           transition: @transition;
+        }        
+        &:first-child {
+          margin-top: 50px;
+        }
+        &:last-child {
+          margin-bottom: 50px;
         }
     }
     &__dateblock {

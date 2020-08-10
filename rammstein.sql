@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Хост: localhost
--- Время создания: Авг 09 2020 г., 22:28
--- Версия сервера: 10.4.13-MariaDB
--- Версия PHP: 7.4.7
+-- Хост: 127.0.0.1
+-- Время создания: Авг 10 2020 г., 07:55
+-- Версия сервера: 10.4.11-MariaDB
+-- Версия PHP: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -45,7 +45,16 @@ INSERT INTO `posters` (`id`, `concert_date`, `monthyear`, `city`, `place`) VALUE
 (3, 27, 'Май 2021', 'Клагенфурт', 'Wörthersee Stadion'),
 (4, 31, 'Май 2021', 'Штутгард', 'Mercedes-Benz Arena'),
 (5, 1, 'Июня 2021', 'Клагенфурт', 'Wörthersee Stadion'),
-(6, 5, 'Июня 2021', 'Берлин', 'Olympiastadion Berlin');
+(6, 5, 'Июня 2021', 'Берлин', 'Olympiastadion Berlin'),
+(7, 6, 'Июня 2021', 'Берлин', 'Olympiastadion Berlin'),
+(8, 12, 'Июня 2021', 'Белфаст', 'Boucher Road Playing Fields'),
+(10, 16, 'Июня 2021', 'Кардиф', 'Principality Stadium'),
+(11, 19, 'Июня 2021', 'Ковентри', 'Ricoh Arena'),
+(12, 23, 'Июня 2021', 'Opxyc', 'Ceres Park'),
+(13, 26, 'Июня 2021', 'Дюсельдорф', 'Merkur Spiel-Arena'),
+(14, 30, 'Июня 2021', 'Гамбург', 'Volksparkstadion'),
+(15, 1, 'Июля 2021', 'Гамбург', 'Volksparkstadion'),
+(16, 5, 'Июля 2021', 'Цюрих', 'Stadion Letzigrund');
 
 -- --------------------------------------------------------
 
@@ -93,7 +102,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `posters`
 --
 ALTER TABLE `posters`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT для таблицы `users`

@@ -39,10 +39,10 @@
       // border: @border;
       display: flex;
       justify-content: center;      
-      margin: 100px 0;
+      margin: 100px 0;        
     }
     &__tableblock {
-      border: @border;
+      // border: @border;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -54,6 +54,10 @@
           width: 85%;
           transition: @transition;
         });
+        .lg-block({
+          width: 90%;
+          transition: @transition;
+        });        
     }
     &__tabledatas {
       // border: @border;
@@ -73,6 +77,15 @@
         &:last-child {
           margin-bottom: 50px;
         }
+        .lg-block({
+          width: 90%;
+        });
+        .sm-block({
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 250px;          
+        });
     }
     &__dateblock {
       // border: @border;
@@ -80,15 +93,24 @@
       justify-content: center;
       width: 25%;
       margin-left: 15px;
+      transition: @transition;
+        .sm-block({
+          width: 55%;
+          transition: @transition;
+        });
+        .xs-block({
+          width: 65%;
+          transition: @transition;
+        });
     }
     &__number {
-      border: @border;
+      // border: @border;
       display: flex;
       justify-content: center;
       width: 40%;
-      transition: @transition;
+      transition: @transition;                
         span {
-          border: @border;
+          // border: @border;
           align-self: center;
           font-size: 5rem;
           font-weight: bolder;          
@@ -97,24 +119,37 @@
               font-size: 4rem;
               transition: @transition;
             });
+            .lg-block({
+              font-size: 3rem;
+              transition: @transition;
+            });            
         }
     }
     &__monthyear {
-      border: @border;
+      // border: @border;
       display: flex;
       justify-content: center;
       align-items: center;
       width: 60%;
-      span {
-        font-size: 1.5rem;
-        font-weight: bolder;
-        transition: @transition;
-        text-align: center;
-          .mgxl-block({
-            font-size: 1.1rem;
-            transition: @transition;
-          });
-      }
+      transition: @transition;
+        .xs-block({
+          width: 65%;
+          transition: @transition;
+        });
+        span {
+          font-size: 1.5rem;
+          font-weight: bolder;          
+          text-align: center;
+          transition: @transition;
+            .mgxl-block({
+              font-size: 1.1rem;
+              transition: @transition;
+            });
+            .lg-block({
+              font-size: 1rem;
+              transition: @transition;
+            });
+        }
     }
 
 
@@ -124,6 +159,11 @@
       justify-content: center;
       align-items: center;
       width: 50%;
+      transition: @transition;
+        .xs-block({
+          width: 90%;
+          transition: @transition;
+        });
     }
     &__place {
       display: flex;
@@ -137,6 +177,9 @@
               font-size: 1.2rem;
               transition: @transition;
             });
+            .lg-block({
+              font-size: 1rem;
+            });
           &:nth-child(1) {
             font-size: 2rem;
             font-weight: bolder;
@@ -144,6 +187,9 @@
               .mgxl-block({
                 font-size: 1.5rem;
                 transition: @transition;
+              });
+              .lg-block({
+                font-size: 1.3rem;
               });
           }
         }
@@ -156,8 +202,17 @@
       align-items: center;
       width: 25%;
       margin-right: 15px;
+      transition: @transition;
+        .sm-block({
+          width: 50%;
+          transition: @transition;
+        });
+        .xs-block({
+          width: 75%;
+          transition: @transition;
+        });
         button {
-          border: none;
+          border: none;          
           width: 250px;
           height: 55px;
           border-radius: 15px;
@@ -171,6 +226,11 @@
             .mgxl-block({
               width: 200px;
               height: 50px;
+              transition: @transition;
+            });
+            .sm-block({
+              width: 350px;
+              height: 60px;
               transition: @transition;
             });
         }

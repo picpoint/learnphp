@@ -17,6 +17,10 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
+
+<?php
+  require_once "../controller/subscribeController.php";
+?>
   
   <section class="wrp">    
 
@@ -63,8 +67,16 @@
         <div class="wrp__mcblock">        
           <div class="wrp__mailing">
             <span>Подписаться на рассылку</span>
-            <input type="text" placeholder="Добавьте эл.почту*">
-            <button>OK</button>
+            <form method="POST">
+              <input type="email" name="email" placeholder="Добавьте эл.почту*">
+              <button type="submit" name="btnsubscribe">OK</button>
+            </form>
+            <span>
+              <?php
+                $res = new SubscribeModel();
+                $res -> writeUserEmail();
+              ?>
+            </span>            
           </div>
         
           <div class="wrp__contacts">

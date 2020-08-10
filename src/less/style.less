@@ -394,31 +394,39 @@
         span {
           color: white;
         }
-        input {
-          border: none;
-          height: 35%;
-          width: 300px;
-          margin: 1px;          
-          outline: none;
-          background-color: rgba(0, 0, 0, 0.01);
-          border: 3px solid white;
-          color: white;
-          padding-left: 7px;
-          text-decoration: white;
-            &::placeholder {
-              color: white;
-            }
-        }
-        button {
-          border: none;
-          height: 35%;
-          width: 313px;
-          margin: 1px;
-          font-weight: bolder;          
-          background-color: white;
-          outline: none;
-          cursor: pointer;          
-        }
+        form {
+          // border: @border;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;          
+          height: 90%;
+          input {
+            border: none;
+            height: 35%;
+            width: 300px;
+            margin: 1px;          
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.01);
+            border: 3px solid white;
+            color: white;
+            padding-left: 7px;
+            text-decoration: white;
+              &::placeholder {
+                color: white;
+              }
+          }
+          button {
+            border: none;
+            height: 35%;
+            width: 313px;
+            margin: 1px;
+            font-weight: bolder;          
+            background-color: white;
+            outline: none;
+            cursor: pointer;          
+          }
+        }        
     }
     &__contacts {      
       // border: @border;

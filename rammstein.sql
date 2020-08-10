@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Хост: 127.0.0.1
--- Время создания: Авг 10 2020 г., 07:55
--- Версия сервера: 10.4.11-MariaDB
--- Версия PHP: 7.4.5
+-- Хост: localhost
+-- Время создания: Авг 10 2020 г., 22:29
+-- Версия сервера: 10.4.13-MariaDB
+-- Версия PHP: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -59,6 +59,24 @@ INSERT INTO `posters` (`id`, `concert_date`, `monthyear`, `city`, `place`) VALUE
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `subscribe`
+--
+
+CREATE TABLE `subscribe` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `subscribe_email` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `subscribe`
+--
+
+INSERT INTO `subscribe` (`id`, `subscribe_email`) VALUES
+(1, 'picpoint@yandex.ru');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `users`
 --
 
@@ -89,6 +107,12 @@ ALTER TABLE `posters`
   ADD UNIQUE KEY `id` (`id`);
 
 --
+-- Индексы таблицы `subscribe`
+--
+ALTER TABLE `subscribe`
+  ADD UNIQUE KEY `id` (`id`);
+
+--
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
@@ -103,6 +127,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `posters`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT для таблицы `subscribe`
+--
+ALTER TABLE `subscribe`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=324;
 
 --
 -- AUTO_INCREMENT для таблицы `users`

@@ -2,9 +2,10 @@
   session_start();
   // setcookie($_SESSION['login'], $_SESSION['password'], time() - 604800);
 
-  ini_set('error_reporting', E_ALL);
-  ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
+  // ini_set('error_reporting', E_ALL);
+  // ini_set('display_errors', 1);
+  // ini_set('display_startup_errors', 1);  
+  error_reporting(0);
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +27,7 @@
 
     <div class="wrp__menu">
       <div class="wrp__logo">
-        <a href="#">
+        <a href="http://localhost/learnphp/dist/index.php">
           <img src="pict/logo.png" alt="logo">
         </a>
       </div>
@@ -41,7 +42,7 @@
 
       <div class="wrp__list">
         <a href="about.php" class="wrp__link">О ГРУППЕ</a>
-        <a href="#" class="wrp__link">СЛУШАТЬ</a>
+        <a href="listen.php" class="wrp__link">СЛУШАТЬ</a>
         <a href="poster.php" class="wrp__link">АФИША</a>
         <a href="#" class="wrp__link">ГАЛЕРЕЯ</a>
       </div>

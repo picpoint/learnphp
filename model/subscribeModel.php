@@ -13,6 +13,7 @@ class SubscribeModel {
 
 
   public function writeUserEmail() {
+    $mass = [];
     $res = new SubcribeController();
     $email = $res -> subscribeMethos();
 
@@ -20,13 +21,26 @@ class SubscribeModel {
     $sth -> execute();
     $allEmail = $sth -> fetchAll(PDO::FETCH_ASSOC);
 
-    
     foreach($allEmail as $emails) {
-      
+      foreach($emails as $key => $value) {        
+        $mass[] = $value;
+      }
+    }    
+    
+    if(isset($email)) {
+      if(in_array($email, $mass)) {
+        echo("Такой email уже подписан на рассылку");
+      } else if(!empty($email)) {
+        $sth = $this->connct -> prepare("INSERT INTO subscribe (subscribe_email) VALUE('$email')");
+        $sth -> execute();
+        echo("Вы успешно подписанны на рассылку");
+      } 
+    } else {
+      echo('');
     }
 
-    // $sth = $this->connct -> prepare("INSERT INTO subscribe (subscribe_email) VALUE('$email')");
-    // $sth -> execute();
+    
+    
   }
 
 

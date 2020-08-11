@@ -10,7 +10,7 @@ class SubcribeController {
 
 
   public function subscribeMethos() {
-    $this->email = $_POST['email'];
+    $this->email = trim($_POST['email']);
     $this->btn = $_POST['btnsubscribe'];
 
     if(isset($this->btn) && !empty($this->email)) {

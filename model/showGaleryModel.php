@@ -15,6 +15,6 @@ class GetUserContent {
     $usrContent[] = $muz;
     return $usrContent;    
   }
-
+  
 
 }

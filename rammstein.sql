@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost
--- Время создания: Авг 10 2020 г., 22:29
+-- Время создания: Авг 11 2020 г., 23:02
 -- Версия сервера: 10.4.13-MariaDB
 -- Версия PHP: 7.4.7
 
@@ -72,7 +72,14 @@ CREATE TABLE `subscribe` (
 --
 
 INSERT INTO `subscribe` (`id`, `subscribe_email`) VALUES
-(1, 'picpoint@yandex.ru');
+(1, 'picpoint@yandex.ru'),
+(324, 'rubin-site@yandex.ru'),
+(326, 'riminbox@inbox.ru'),
+(328, 'rubin@magazin-rubin.ru'),
+(330, 'goga@inbox.ru'),
+(331, 'burbonGon563@inbox.ru'),
+(332, 'asfg@mail.ru'),
+(333, 'ggg@inbox.ru');
 
 -- --------------------------------------------------------
 
@@ -132,7 +139,7 @@ ALTER TABLE `posters`
 -- AUTO_INCREMENT для таблицы `subscribe`
 --
 ALTER TABLE `subscribe`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=324;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=334;
 
 --
 -- AUTO_INCREMENT для таблицы `users`

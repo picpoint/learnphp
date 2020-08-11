@@ -42,10 +42,8 @@ class ShowPost{
         echo("</div>");
       echo("</div>");
     }
-
     
   }
-
 
   
 }

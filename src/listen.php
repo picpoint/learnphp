@@ -21,11 +21,11 @@ ini_set('display_startup_errors', 1);
     <div class="ltn__hdr">
       <h3>Слушать музыку</h3>
     </div>
-    <div class="ltn__muz">
-      <?php
-        $res = new ListenMuz();
-        $res -> getAllMusic();
-      ?>
+    <div class="ltn__muz">      
+        <?php
+          $res = new ListenMuz();
+          $res -> getAllMusic();
+        ?>
     </div>
   </section>
 

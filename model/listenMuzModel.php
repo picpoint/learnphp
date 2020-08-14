@@ -8,26 +8,25 @@ class ListenMuz {
   public function getAllMusic() {        
     $arrFolders = scandir($this->usersFolders);
 
-    foreach($arrFolders as $key => $value) {
-      if($value != '.' && $value != '..') {        
-        $pathToSingleUser = $this->usersFolders . "/$value" . '/music';        
-        $fileMuz = scandir($pathToSingleUser);
-        
-        echo($pathToSingleUser);
+    foreach($arrFolders as $key => $vl) {
+      if($vl != '.' && $vl != '..') {        
+        $pathToSingleUser = $this->usersFolders . "/$vl" . '/music';
+        $fileMuz = scandir($pathToSingleUser);               
 
         foreach($fileMuz as $key => $value) {          
-          if($value != '.' && $value != '..') {            
-            // echo("<audio src=". "$value" ." controls preload="."auto"." type=" . "audio/mpeg" . "></audio>");
-            // echo("<audio src=". "../usersFolders/den/music/$value" ." controls="."controls"." ></audio>");
-            echo("<audio src=". "$value" . " controls="."controls"." preload="."auto"." type="."audio/mpeg"."></audio>");
-
-          }
-          
-        }        
-        
+          if($value != '.' && $value != '..') {       
+            echo("<div class=" . "ltn__song" . ">");
+              echo("<audio src=". "../usersFolders/$vl/music/$value" ." controls="."controls"." ></audio>");
+              echo("<span>$value</span>");
+            echo("</div>");
+          }          
+        }            
 
       } 
+
     }
+
+
   }
 
 

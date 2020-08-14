@@ -3,15 +3,14 @@
 
 
 .ltn {
-  border: @border;  
+  // border: @border;  
   display: flex;
   flex-direction: column;
   background-image: url("../pict/bglk.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
+  background-size: 100%;  
+  background-attachment: fixed;    
     &__hdr {
-      border: @border;
+      // border: @border;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -20,14 +19,46 @@
         h3 {
           font-size: 5rem;
           color: white;          
-          font-family: 'Reise';          
+          font-family: 'Reise';
+          transition: @transition;
+            .lg-block({
+              font-size: 4rem;
+              transition: @transition;
+            });
+            .md-block({
+              font-size: 3rem;
+              transition: @transition;
+            });
+            .xs-block({
+              font-size: 2rem;
+              transition: @transition;
+            });
         }
     }
     &__muz {
-      border: @border;
+      // border: @border;
       display: flex;
+      justify-content: center;
+      align-content: flex-start;
       flex-wrap: wrap;
       height: 90%;
-      color: white;
+      color: white;        
     }
+    &__song {
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.5), 0 10px 10px rgba(0,0,0,0.5);
+        audio {          
+          margin: 5px;
+        }
+        span {
+          text-align: center;
+        }
+    }        
 }

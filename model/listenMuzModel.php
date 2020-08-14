@@ -12,16 +12,14 @@ class ListenMuz {
       if($value != '.' && $value != '..') {        
         $pathToSingleUser = $this->usersFolders . "/$value" . '/music';        
         $fileMuz = scandir($pathToSingleUser);
-               
+        
+        echo($pathToSingleUser);
+
         foreach($fileMuz as $key => $value) {          
-          if($value != '.' && $value != '..') {
-            echo("<br>");            
-            // echo($value);            
-            // echo("$pathToSingleUser/$value");
-            echo("<br>");
-            echo("<audio src=". "$pathToSingleUser/$value" ." controls preload="."auto"." type=" . "audio/mpeg" . "></audio>");
-            // echo("<audio src="."../usersFolders/$usr/music/$value"." controls preload="."auto"." type=" . "audio/mpeg" . "></audio> ");
-            // print_r($pathToSingleUser);
+          if($value != '.' && $value != '..') {            
+            // echo("<audio src=". "$value" ." controls preload="."auto"." type=" . "audio/mpeg" . "></audio>");
+            // echo("<audio src=". "../usersFolders/den/music/$value" ." controls="."controls"." ></audio>");
+            echo("<audio src=". "$value" . " controls="."controls"." preload="."auto"." type="."audio/mpeg"."></audio>");
 
           }
           

@@ -36,11 +36,11 @@ class AutorizationModel {
 
     $fullArr = array_combine($arrLog, $arrPass);    
 
-    foreach($fullArr as $key => $value) {      
+    foreach($fullArr as $key => $value) {
       if($logPass[0] == $key && $logPass[1] == password_verify($logPass[1], $value)) {
-        header('location: ../view/userPage.php');                
         $_SESSION['login'] = $logPass[0];
-        // $_SESSION['password'] = password_hash($logPass[1], PASSWORD_DEFAULT);
+        $_SESSION['password'] = $value;
+        header('location: ../view/userPage.php');                        
       }      
     }
 

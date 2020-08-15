@@ -1,33 +1,33 @@
 <?php
 
-require_once "../model/autoInputModel.php";
+require_once "../model/autoInputModel.php";                                                 // подключаем модель для получения данных из БД
 
 
 class AutoInput {
-  private $arrLog = [];
-  private $arrPass = [];
-  private $arrAssoc = [];
+  private $arrLog = [];                                                                     // массив для логинов
+  private $arrPass = [];                                                                    // массив для паролей
+  private $arrAssoc = [];                                                                   // ассоциативный массив для перебора
   
-  public function autoInp() {
-    $arrUsrs = new getDataUsers();
+  public function autoInp() {                                                               // метод автовхода
+    $arrUsrs = new getDataUsers();                                                          // получаем данные из модели
     $res = $arrUsrs->getDatasUsr();    
     
-    foreach($res as $rs) {
-      foreach($rs as $key => $value) {        
-        if($key == 'login') {
-          $arrLog[] = $value;
-        } elseif($key == 'password') {
-          $arrPass[] = $value;
+    foreach($res as $rs) {                                                                  // перебираем полученный массив массивов
+      foreach($rs as $key => $value) {                                                      // перебираем массив как ключ-значение
+        if($key == 'login') {                                                               // если ключ == login
+          $arrLog[] = $value;                                                               // помещаем в массив $arrLog[] значение
+        } elseif($key == 'password') {                                                      // иначе если ключ == password
+          $arrPass[] = $value;                                                              // помещаем значение в $arrPass[]
         }
       }
     }
     
-    $arrAssoc = array_combine($arrLog, $arrPass);
+    $arrAssoc = array_combine($arrLog, $arrPass);                                           // комбинируем два массива $arrLog[] и $arrPass[] в один
 
-    if(isset($_SESSION['login']) && isset($_SESSION['password'])) {
-      foreach($arrAssoc as $key => $value) {            
-        if($_SESSION['login'] == $key && $_SESSION['password'] == $value) {
-          header('location: ../view/userPage.php');
+    if(isset($_SESSION['login']) && isset($_SESSION['password'])) {                         // если существует сессия логин и пароль
+      foreach($arrAssoc as $key => $value) {                                                // перебираем $arrAssoc
+        if($_SESSION['login'] == $key && $_SESSION['password'] == $value) {                 // если логин == ключу и пароль == значению 
+          header('location: ../view/userPage.php');                                         // переходим в ЛК
         } 
       }
     } 

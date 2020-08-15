@@ -2,18 +2,18 @@
 
 
 
-class getDataUsers {
+class getDataUsers {                                                                                // класс для сбора инфы о логинах и паролях зареганных пользователях
   
   public function __construct() {
-    $this->cnct = new PDO('mysql:hostname=localhost;dbname=rammstein', 'rmtar', '2203');
+    $this->cnct = new PDO('mysql:hostname=localhost;dbname=rammstein', 'rmtar', '2203');            // создание автосоединения с БД
   }
 
   
-  public function getDatasUsr() {
-    $sth = $this->cnct -> prepare('SELECT login, password FROM users');
+  public function getDatasUsr() {                                                                   // метод получения данных о пользователях
+    $sth = $this->cnct -> prepare('SELECT login, password FROM users');                             // выбрать все логины и пароли из таблицы users
     $sth -> execute();
-    $arr = $sth -> fetchAll(PDO::FETCH_ASSOC);
-    return $arr;
+    $arr = $sth -> fetchAll(PDO::FETCH_ASSOC);                                                      // получить всё в виде ассоциативного мамссива
+    return $arr;                                                                                    // вернуть данный массив
   }
   
 

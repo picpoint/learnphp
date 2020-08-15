@@ -5,6 +5,7 @@
 class ListenMuz {
   public $usersFolders = __DIR__.'/../usersFolders';
 
+  
   public function getAllMusic() {        
     $arrFolders = scandir($this->usersFolders);
 
@@ -23,12 +24,9 @@ class ListenMuz {
         }            
 
       } 
-
     }
 
-
   }
-
 
 
 }

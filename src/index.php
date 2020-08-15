@@ -44,7 +44,7 @@
         <a href="about.php" class="wrp__link">О ГРУППЕ</a>
         <a href="listen.php" class="wrp__link">СЛУШАТЬ</a>
         <a href="poster.php" class="wrp__link">АФИША</a>
-        <a href="#" class="wrp__link">ГАЛЕРЕЯ</a>
+        <a href="show.php" class="wrp__link">ГАЛЕРЕЯ</a>
       </div>
       <div class="wrp__enter">
         <div class="wrp__registration">

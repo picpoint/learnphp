@@ -7,7 +7,7 @@ html {
   background-attachment: fixed;
 }
 
-.ltn {
+.shw {
   // border: @border;  
   display: flex;
   flex-direction: column;  
@@ -38,7 +38,7 @@ html {
             });
         }
     }
-    &__muz {
+    &__pic {
       // border: @border;
       display: flex;
       justify-content: center;
@@ -46,23 +46,11 @@ html {
       flex-wrap: wrap;
       height: 90%;
       color: white;        
-      // margin-bottom: 100px;
+        img {
+          width: 200px;
+          height: 200px;
+          margin: 10px;
+        }
     }
-    &__song {
-      border-radius: 7px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 10px;
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.5);
-      box-shadow: 0 14px 28px rgba(0,0,0,0.5), 0 10px 10px rgba(0,0,0,0.5);
-        audio {          
-          margin: 5px;
-        }
-        span {
-          text-align: center;
-        }
-    }        
+    
 }

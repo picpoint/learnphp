@@ -12,7 +12,7 @@ class getDataUsers {                                                            
   public function getDatasUsr() {                                                                   // метод получения данных о пользователях
     $sth = $this->cnct -> prepare('SELECT login, password FROM users');                             // выбрать все логины и пароли из таблицы users
     $sth -> execute();
-    $arr = $sth -> fetchAll(PDO::FETCH_ASSOC);                                                      // получить всё в виде ассоциативного мамссива
+    $arr = $sth -> fetchAll(PDO::FETCH_ASSOC);                                                      // получить всё в виде ассоциативного массива
     return $arr;                                                                                    // вернуть данный массив
   }
   

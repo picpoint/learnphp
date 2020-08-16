@@ -39,7 +39,7 @@
           <a href="#" class="galery">Галерея</a>
         </div>
         <div class="lk__logout">
-          <a href="../dist/index.php">Выход</a>
+          <a href="../controller/logOut.php">Выход</a>
         </div>
       </div>
     </div>

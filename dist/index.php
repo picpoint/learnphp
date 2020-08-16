@@ -1,10 +1,9 @@
 <?php
-  session_start();
-  // setcookie($_SESSION['login'], $_SESSION['password'], time() - 604800);
-
-  // ini_set('error_reporting', E_ALL);
-  // ini_set('display_errors', 1);
-  // ini_set('display_startup_errors', 1);  
+  session_start();  
+  
+  ini_set('error_reporting', E_ALL);
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);  
   error_reporting(0);
 ?>
 
@@ -21,6 +20,10 @@
 
 <?php
   require_once "../controller/subscribeController.php";
+  require_once "../controller/autoEntranceController.php";
+
+  $entrance = new AutoEntrance();
+  $entrance -> autoEntr();
 ?>
   
   <section class="wrp">    

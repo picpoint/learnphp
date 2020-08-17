@@ -3,7 +3,7 @@
 require_once "../model/autoEntranceModel.php";                                              // подключаем модель для получения данных из БД
 
 
-class AutoEntrance {
+class AutoEntrance {                                                                        // класс для автовхода в ЛК
   private $arrLog = [];                                                                     // массив для логинов
   private $arrPass = [];                                                                    // массив для паролей
   private $arrAssoc = [];                                                                   // ассоциативный массив для перебора

@@ -1,6 +1,6 @@
 <?php
-  session_start();
-  setcookie($_SESSION['login'], $_SESSION['password'], time() + 86400);
+session_start();
+setcookie($_SESSION['login'], $_SESSION['password'], time() + 86400, '/');
 
   // error_reporting(0);
   ini_set('error_reporting', E_ALL);
